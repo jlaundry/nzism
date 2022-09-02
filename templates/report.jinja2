@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <title>NZISM Comparison</title>
+
+    <style type="text/css">
+        {% include 'style.css' %}
+    </style>
+</head>
+<body>
+    <section>
+        <p>This is a report of changes between <strong>{{ args.old.name }}</strong> and <strong>{{ args.new.name }}</strong>.</p>
+        <ul>
+            <li><a href="#controls_added">Controls Added</a></li>
+            <li><a href="#controls_removed">Controls Removed</a></li>
+            <li><a href="#controls_changed">Controls Changed</a></li>
+        </ul>
+    </section>
+    <section id="controls_added">
+        <h1>Controls Added</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for control in controls_added|sort(attribute='sortkey') %}
+                <tr>
+                    <td>{{ control.CID }}</td>
+                    <td>{{ control.title }}</td>
+                    <td>{{ control.classifications }}</td>
+                    <td>{{ control.compliances }}</td>
+                    <td>{{ control.text }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_removed">
+        <h1>Controls Removed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for control in controls_removed|sort(attribute='sortkey') %}
+                <tr>
+                    <td>{{ control.CID }}</td>
+                    <td>{{ control.title }}</td>
+                    <td>{{ control.classifications }}</td>
+                    <td>{{ control.compliances }}</td>
+                    <td>{{ control.text }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_changed">
+        <h1>Controls Changed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for control in controls_changed|sort(attribute='sortkey') %}
+                <tr>
+                    <td>{{ control.CID }}</td>
+                    <td>{{ control.title }}</td>
+                    <td>{{ control.classifications }}</td>
+                    <td>{{ control.compliances }}</td>
+                    <td>{{ control.text }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+<body>
+</html>

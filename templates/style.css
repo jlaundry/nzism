@@ -1,0 +1,38 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #040477;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #040477;
+    color: white;
+}
+
+th, td {
+    padding: 0.3em;
+    text-align: left;
+}
+
+td {
+    border: 1px solid black;
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+
+span.insert {
+    text-decoration: underline;
+    background-color: mediumseagreen;
+}
+
+span.delete {
+    text-decoration: line-through;
+    background-color: firebrick;
+}
