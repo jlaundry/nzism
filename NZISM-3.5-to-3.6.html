@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <title>NZISM Comparison</title>
+
+    <style type="text/css">
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #040477;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #040477;
+    color: white;
+}
+
+th, td {
+    padding: 0.3em;
+    text-align: left;
+}
+
+td {
+    border: 1px solid black;
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+
+span.insert {
+    text-decoration: underline;
+    background-color: mediumseagreen;
+}
+
+span.delete {
+    text-decoration: line-through;
+    background-color: firebrick;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <p>This is a report of changes between <strong>nzism-data/NZISM-FullDoc-V.3.5-January-2022.xml</strong> and <strong>nzism-data/NZISM-FullDoc-V.3.6-September-2022.xml</strong>.</p>
+        <ul>
+            <li><a href="#controls_added">Controls Added</a></li>
+            <li><a href="#controls_removed">Controls Removed</a></li>
+            <li><a href="#controls_changed">Controls Changed</a></li>
+        </ul>
+    </section>
+    <section id="controls_added">
+        <h1>Controls Added</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>7206</td>
+                    <td>2.4.13.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure they are aware of the latest developments in post-quantum cryptography.  GCSB is tracking these developments and will continue to provide advice through the NZISM.</td>
+                </tr>
+                
+                <tr>
+                    <td>7207</td>
+                    <td>2.4.13.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD maintain an inventory of sensitive and critical datasets that must be secured for an extended amount of time.  This will ensure datasets that may be at risk now and decrypted once a cryptographically relevant quantum computer is available are not secured solely through the use of quantum vulnerable cryptography.</td>
+                </tr>
+                
+                <tr>
+                    <td>7208</td>
+                    <td>2.4.13.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD conduct an inventory of systems using cryptographic technologies to determine the potential size and scope of future transition work once post-quantum cryptographic systems become available.</td>
+                </tr>
+                
+                <tr>
+                    <td>7209</td>
+                    <td>2.4.13.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD identify which systems in their inventory rely on public key cryptography and note them as quantum vulnerable in agency risk assessments.</td>
+                </tr>
+                
+                <tr>
+                    <td>7210</td>
+                    <td>2.4.13.C.05.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD determine a priority order for quantum vulnerable systems to be transitioned from classical cryptography to post-quantum cryptography.</td>
+                </tr>
+                
+                <tr>
+                    <td>7211</td>
+                    <td>2.4.13.C.06.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD consider the following factors when prioritising the quantum vulnerable systems:
+Is the system a high value asset based on agency requirements?
+Does the system protect sensitive information (e.g. key stores, passwords, root keys, signing keys, personally identifiable information, and classified information)?
+Do other systems (internal or external to the agency) depend on the cryptographic protections in place on the quantum vulnerable system?
+How long does the data need to be protected?
+</td>
+                </tr>
+                
+                <tr>
+                    <td>7212</td>
+                    <td>2.4.13.C.07.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Using the inventory and prioritisation information, agencies SHOULD develop a plan for system transitions upon publication of the new post-quantum cryptographic standard.</td>
+                </tr>
+                
+                <tr>
+                    <td>7250</td>
+                    <td>18.7.14.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST undertake a threat and risk assessment on the use of inverse split tunnelling prior to enabling the functionality in remote access VPN systems.</td>
+                </tr>
+                
+                <tr>
+                    <td>7251</td>
+                    <td>18.7.14.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>When providing inverse split-tunnelled access to internet based services (“directly accessed services”), the following aspects SHOULD be considered as part of the threat and risk assessment:
+How do directly accessed services authenticate agency device identities prior to granting access to the service?
+How do agency devices securely resolve internet addresses for directly accessed services?
+How are the communications between the devices and directly accessed services secured?
+How does an agency monitor and account for access made to directly accessed services?
+How does an agency protect devices from compromise if they are able to directly access internet based resources, or be directly accessed from the internet?
+How do directly accessed services authenticate the user of the agency device prior to granting access to the service (this is separate to authenticating the agency device itself)?
+How does an agency enforce the use of multi-factor authentication with directly accessed services?
+How does an agency authorise access to directly accessed services, and does this include from devices that are not authorised to connect to agency remote access services (authorisation and authentication are separate activities)?
+How is access to directly accessed cloud services removed when staff no longer require access or leave the agency?
+</td>
+                </tr>
+                
+                <tr>
+                    <td>7349</td>
+                    <td>23.1.53.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST clearly identify and understand where classification, security domain, and trust zone boundaries exist prior to implementation or adoption of public cloud services.</td>
+                </tr>
+                
+                <tr>
+                    <td>7350</td>
+                    <td>23.1.53.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Where multiple identity systems under different security policies are used to control access to an agency’s instance of a public cloud service, the instance MUST be considered to be in a separate security domain from services where access control is managed solely by the agency’s identity system.</td>
+                </tr>
+                
+                <tr>
+                    <td>7353</td>
+                    <td>23.1.54.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST clearly identify and understand their cloud service provider’s security responsibilities for each service consumed, and the aspects of security that the agency is responsible for, prior to implementation or adoption of the service.</td>
+                </tr>
+                
+                <tr>
+                    <td>7354</td>
+                    <td>23.1.54.C.02.</td>
+                    <td></td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD clearly document the aspects of security they and their provider are responsible for.</td>
+                </tr>
+                
+                <tr>
+                    <td>7355</td>
+                    <td>23.1.54.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD review existing security processes to ensure compatibility with their cloud service provider’s responsibilities.</td>
+                </tr>
+                
+                <tr>
+                    <td>7359</td>
+                    <td>23.1.55.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD deploy and manage their cloud infrastructure using automation, version control, and infrastructure as code techniques where these are available.</td>
+                </tr>
+                
+                <tr>
+                    <td>7386</td>
+                    <td>23.2.16.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST update their risk assessment process to account for public cloud specific risks, prior to implementation or adoption of public cloud services.</td>
+                </tr>
+                
+                <tr>
+                    <td>7387</td>
+                    <td>23.2.16.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST undertake a cloud specific risk assessment in line with the process outlined by the GCDO for each public cloud service, prior to implementation or adoption of public cloud services.</td>
+                </tr>
+                
+                <tr>
+                    <td>7388</td>
+                    <td>23.2.16.C.03.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must Not</td>
+                    <td>Agencies MUST NOT accredit public cloud services for use with data classified CONFIDENTIAL, SECRET, or TOP SECRET.</td>
+                </tr>
+                
+                <tr>
+                    <td>7389</td>
+                    <td>23.2.16.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td>Agencies MUST NOT accredit public cloud services to host, process, store, or transmit NZEO endorsed information.</td>
+                </tr>
+                
+                <tr>
+                    <td>7394</td>
+                    <td>23.2.17.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST consider risks to the availability of systems and information in their design of cloud systems architectures, supporting controls, and governance processes prior to implementation or adoption of public cloud services.</td>
+                </tr>
+                
+                <tr>
+                    <td>7397</td>
+                    <td>23.2.18.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD obtain regular assurance checks on cloud service providers, ensuring that they are undertaken by a suitably qualified assessor.</td>
+                </tr>
+                
+                <tr>
+                    <td>7400</td>
+                    <td>23.2.19.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST obtain assurance that cloud service providers undertake appropriate software and operating system patching and maintenance.</td>
+                </tr>
+                
+                <tr>
+                    <td>7404</td>
+                    <td>23.2.20.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST obtain assurance that technical protections exist to adequately isolate tenants.</td>
+                </tr>
+                
+                <tr>
+                    <td>7407</td>
+                    <td>23.2.21.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD make use of the GCSB endorsed baseline security templates where applicable.  </td>
+                </tr>
+                
+                <tr>
+                    <td>7433</td>
+                    <td>23.3.18.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Accounts used to perform privileged actions SHOULD NOT be synchronised between environments.</td>
+                </tr>
+                
+                <tr>
+                    <td>7436</td>
+                    <td>23.3.19.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Where administration interfaces or portals are accessible from the internet, privileged accounts MUST be configured to use multiple factors of authentication.</td>
+                </tr>
+                
+                <tr>
+                    <td>7437</td>
+                    <td>23.3.19.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Where cloud service interfaces or portals are accessible from the internet, user accounts SHOULD be configured to use multiple factors of authentication.</td>
+                </tr>
+                
+                <tr>
+                    <td>7440</td>
+                    <td>23.3.20.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Staff offboarding processes MUST be updated to include removing all access to public cloud based services, prior to implementation or adoption of public cloud services.</td>
+                </tr>
+                
+                <tr>
+                    <td>7443</td>
+                    <td>23.3.21.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that relying parties continually verify the authenticity of their identity provider’s responses, through for example, cryptographic signing of authentication requests and responses.</td>
+                </tr>
+                
+                <tr>
+                    <td>7446</td>
+                    <td>23.3.22.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure that relying parties use all available information from the identity provider to inform access control decisions.</td>
+                </tr>
+                
+                <tr>
+                    <td>7461</td>
+                    <td>23.4.9.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>For each cloud service, agencies MUST ensure that the mechanisms used to protect data meet agency requirements.</td>
+                </tr>
+                
+                <tr>
+                    <td>7462</td>
+                    <td>23.4.9.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST update key management plans to account for differences in public cloud before storing organisational data in a public cloud environment.</td>
+                </tr>
+                
+                <tr>
+                    <td>7463</td>
+                    <td>23.4.9.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure their key management plan includes provision for migrating data from the cloud environment where it was created.</td>
+                </tr>
+                
+                <tr>
+                    <td>7466</td>
+                    <td>23.4.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST apply the principle of least privilege and configure service endpoints to restrict access to authorised parties.</td>
+                </tr>
+                
+                <tr>
+                    <td>7469</td>
+                    <td>23.4.11.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST identify where data used in conjunction with a public cloud service is stored or processed, including any replicas or backups that may be created.</td>
+                </tr>
+                
+                <tr>
+                    <td>7470</td>
+                    <td>23.4.11.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agency risk assessments of public cloud services MUST include any risks arising from data location. Any actions required to mitigate these risks must be identified and documented prior to implementation or adoption of public cloud services.</td>
+                </tr>
+                
+                <tr>
+                    <td>7474</td>
+                    <td>23.4.12.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST update their disaster recovery plans prior to storing or replicating data in public cloud services, to ensure these plans address any cloud-specific aspects of backup and recovery.</td>
+                </tr>
+                
+                <tr>
+                    <td>7475</td>
+                    <td>23.4.12.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>When planning tests of disaster recovery processes in accordance with 6.4.6 Backup strategy, agencies MUST include tests of any cloud-specific data recovery processes.</td>
+                </tr>
+                
+                <tr>
+                    <td>7494</td>
+                    <td>23.5.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST understand the range of logging capabilities provided by their cloud service providers and determine whether they are sufficient for agency needs.</td>
+                </tr>
+                
+                <tr>
+                    <td>7496</td>
+                    <td>23.5.11.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that logs associated with public cloud services are collected, protected, and that their integrity can be confirmed in accordance with the agency’s documented logging requirements.</td>
+                </tr>
+                
+                <tr>
+                    <td>7498</td>
+                    <td>23.5.12.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that cloud service provider logs are incorporated into overall enterprise logging and alerting systems or procedures in a timely manner to detect information security incidents.</td>
+                </tr>
+                
+                <tr>
+                    <td>7499</td>
+                    <td>23.5.12.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure that tools and procedures used to detect potential information security incidents account for the public cloud services being consumed by the agency.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_removed">
+        <h1>Controls Removed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_changed">
+        <h1>Controls Changed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>391</td>
+                    <td>3.3.8.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>ITSMs MUST be responsible for ensuring the development, maintenance, updating and implementation of Security Risk Management Plans (SRMPs), Systems Security Plans (S<span class="delete">ecPlan</span><span class="insert">SP</span>) and any Standard Operating Procedures (SOPs) for all agency systems.</td>
+                </tr>
+                
+                <tr>
+                    <td>569</td>
+                    <td>4.3.18.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>The SecPol, SRMP, S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>, SOPs and IRP documentation MUST be reviewed by the auditor to ensure that it is comprehensive and appropriate for the environment the system is to operate within.</td>
+                </tr>
+                
+                <tr>
+                    <td>702</td>
+                    <td>5.1.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that every system is covered by a S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>718</td>
+                    <td>5.1.15.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure that their SRMP, Systems Architecture, S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>, SOPs and IRP are logically connected and consistent for each system, other agency systems and with the agency’s SecPol.</td>
+                </tr>
+                
+                <tr>
+                    <td>729</td>
+                    <td>5.1.18.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that their SecPol, SRMP, S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>, SOPs and IRP are appropriately classified.</td>
+                </tr>
+                
+                <tr>
+                    <td>828</td>
+                    <td>5.4.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST select controls from this manual to be included in the S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span> based on the scope of the system with additional system specific controls being included as a result of the associated SRMP. Encryption Key Management requires specific consideration; refer to Chapter 17 – Cryptography.</td>
+                </tr>
+                
+                <tr>
+                    <td>829</td>
+                    <td>5.4.5.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD use the latest baseline of this manual when developing, and updating, their S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>s as part of the certification, accreditation and reaccreditation of their systems.</td>
+                </tr>
+                
+                <tr>
+                    <td>831</td>
+                    <td>5.4.5.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD include a Key Management Plan in the S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>7134</td>
+                    <td>5.9.24.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>An agency’s VDP MUST contain at least the following core content:
+A scoping statement listing the systems the policy applies to;
+Contact details;
+Secure communication options (including any public keys);
+Information the finder should include in the report;
+Acknowledgement of reports and a response time;
+Guidance on what forms of vulnerability testing are out of scope for reporters/finders (permitted activities);
+Reporters/finders agreeing to not share information about the vulnerability until the end of the disclosure period, in order to allow <span class="delete">let </span>the agency to address any issues before they become public;
+Illegal activities are not permitted (specifying the relevant legislation, such as the Crimes Act); and
+Either that “Bug bounties” will not be paid for any discoveries, or it should provide information about the agency’s bug bounty programme.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1048</td>
+                    <td>6.1.9.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD review the components detailed in the table below. Agencies SHOULD also ensure that any adjustments and changes as a result of any vulnerability analysis are consistent with the vulnerability disclosure policy.
+
+
+Component
+Review
+
+
+Information security documentation
+The SecPol, Systems Architecture, SRMPs, S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>s, SitePlan, SOPs, the VDP, the IRP, and any third party assurance reports.
+
+
+Dispensations
+Prior to the identified expiry date.
+
+
+Operating environment
+When an identified threat emerges or changes, an agency gains or loses a function or the operation of functions are moved to a new physical environment.
+
+
+Procedures
+After an information security incident or test exercise.
+
+
+System security
+Items that could affect the security of the system on a regular basis.
+
+
+Threats
+Changes in threat environment and risk profile.
+
+
+NZISM
+Changes to baseline or other controls, any new controls and guidance.
+
+
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1095</td>
+                    <td>6.3.7.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD follow this change management process outline:
+produce a written change request;
+submit the change request to all stakeholders for approval;
+document the changes to be implemented;
+test the approved changes;
+notification to user of the change schedule and likely effect or outage;
+implement the approved changes after successful testing;
+update the relevant information security documentation including the SRMP, S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span> and SOPs
+notify and educate system users of the changes that have been implemented as close as possible to the time the change is applied; and
+continually educate system users in regards to changes.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1409</td>
+                    <td>8.4.11.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies choosing to prevent the storage of classified information on non-volatile media and enforcing scrubbing of temporary data at logoff or shutdown SHOULD:
+assess the security risks associated with such a decision; and
+specify the processes and conditions for their application within the system’s S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>.
+ </td>
+                </tr>
+                
+                <tr>
+                    <td>1412</td>
+                    <td>8.4.12.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies securing volatile media for IT equipment during non-operational hours SHOULD:
+disconnect power from the equipment the media resides within;
+assess the security risks if not sanitising the media; and
+specify any additional processes and controls that will be applied within the system’s S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1480</td>
+                    <td>9.2.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST specify in the System Security Plan (S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>) any authorisations, security clearances and briefings necessary for system access.</td>
+                </tr>
+                
+                <tr>
+                    <td>1484</td>
+                    <td>9.2.11.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD:
+limit system access on a need-to-know/need-to-access basis;
+provide system users with the least amount of privileges needed to undertake their duties;<span class="delete"> and</span>
+have any requests for access to a system authorised by the supervisor or manager of the system user<span class="insert">; and
+ensure a formal acknowledgement of the security briefing is obtained and recorded</span>.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1487</td>
+                    <td>9.2.12.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD:
+maintain a secure record of:
+
+all authorised system users;
+their user identification;
+why access is required;
+role and privilege level,
+who provided the authorisation to access the system;
+when the authorisation was granted; and
+
+<span class="insert">keep a copy of the acknowledgement signed by the individual granted a clearance; and
+</span>maintain the record, for the life of the system or <span class="insert">information to which access is granted, or </span>the length of employment<span class="insert">,</span> whichever is the longer<span class="delete">, to which access is granted</span>.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1508</td>
+                    <td>9.2.18.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies granting limited higher access to a system MUST ensure that:
+<span class="delete">effecti</span><span class="insert">the appro</span>v<span class="delete">e controls are in place to restrict access to only</span><span class="insert">al for access is formally acknowledged and recorded; and either
+effective controls are in place to restrict access only to</span> classified information that is necessary to undertake the system user’s duties; or
+the system user is continually supervised by another system user who has the appropriate security clearances to access the system.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>2412</td>
+                    <td>10.5.11.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD inspect cables for inconsistencies with the cable register in accordance with the frequency defined in the S<span class="delete">ec</span><span class="insert">S</span>P<span class="delete">lan</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>5626</td>
+                    <td>10.6.29.C.01.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must</td>
+                    <td>Cabinet rails MUST be installed to<span class="insert">:</span>
+provide adequate room for patch cables and wire managers;
+provide adequate space for cable management at front, sides, and rear; and
+arrange switches and patch panels to minimize patching between cabinets & racks.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>3455</td>
+                    <td>12.4.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Where known vulnerabilities cannot be patched, or security patches are not available, agencies SHOULD implement:
+controls to resolve the vulnerability such as:
+
+disable the functionality associated with the vulnerability though product configuration;
+ask the vendor for an alternative method of managing the vulnerability;
+install a version of the product that does not have the identified vulnerability;
+install a different product with a more responsive vendor; or
+engage a software developer to correct the software.
+
+controls to prevent exploitation of the vulnerability including:
+
+apply external input sanitisation (if an input triggers the exploit);
+apply filtering or verification on the software output (if the exploit relates to an information disclosure);
+apply additional access controls that prevent access to the vulnerability; or
+configure firewall rules to limit access to the vulnerable software.
+
+controls to contain the exploit including:
+
+apply firewall rules limiting outward traffic that is likely in the event of an exploitation;
+apply mandatory access control preventing the execution of exploitation code; or
+set file system permissions preventing exploitation code from being written to disk; 
+<span class="insert">allo</span>w<span class="delete">hite and black</span><span class="insert"> and deny </span>listing to prevent code execution; and
+
+controls to detect attacks including:
+
+deploy an IDS;
+monitor logging alerts; or
+use other mechanisms as appropriate for the detection of exploits using the known vulnerability.
+
+controls to prevent attacks including:
+
+deploy an IPS or HIPS; or
+use other mechanisms as appropriate for the diversion of exploits using the known vulnerability, such as honey pots and Null routers.
+
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1234</td>
+                    <td>14.2.4.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD implement application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing as part of the SOE for workstations, servers and any other network device.</td>
+                </tr>
+                
+                <tr>
+                    <td>1242</td>
+                    <td>14.2.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that a system user cannot disable the application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing mechanism.</td>
+                </tr>
+                
+                <tr>
+                    <td>898</td>
+                    <td>14.2.5.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure that application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing does not replace the antivirus and anti-malware software within a system.</td>
+                </tr>
+                
+                <tr>
+                    <td>907</td>
+                    <td>14.2.6.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure that system administrators are not automatically exempt from application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>list<span class="delete">ing</span> policy.</td>
+                </tr>
+                
+                <tr>
+                    <td>936</td>
+                    <td>14.2.7.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure that application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing is used in addition to a strong access control list model and the use of limited privilege accounts.</td>
+                </tr>
+                
+                <tr>
+                    <td>940</td>
+                    <td>14.2.7.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD plan and test application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing mechanisms and processes thoroughly prior to implementation.</td>
+                </tr>
+                
+                <tr>
+                    <td>945</td>
+                    <td>14.2.7.C.05.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD restrict the process creation permissions of any executables which are permitted to run by the application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing controls.</td>
+                </tr>
+                
+                <tr>
+                    <td>947</td>
+                    <td>14.2.7.C.07.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Logs from the application <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing implementation SHOULD include all relevant information.</td>
+                </tr>
+                
+                <tr>
+                    <td>1602</td>
+                    <td>14.3.8.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies permitting TLS through their gateways SHOULD implement:
+a solution that decrypts and inspects the TLS traffic as per content filtering requirements; or
+a<span class="delete"> </span><span class="insert">n allo</span>w<span class="delete">hite</span><span class="insert"> </span>list specifying the addresses (uniform resource locators) to which encrypted connections are permitted, with all other addresses blocked.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1609</td>
+                    <td>14.3.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD implement <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>listing for all HTTP traffic being communicated through their gateways.</td>
+                </tr>
+                
+                <tr>
+                    <td>1608</td>
+                    <td>14.3.10.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies using a<span class="insert">n</span> <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>list on their gateways to specify the external addresses, to which encrypted connections are permitted, SHOULD specify <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>list addresses by domain name or IP address.</td>
+                </tr>
+                
+                <tr>
+                    <td>1610</td>
+                    <td>14.3.10.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>If agencies do not <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>list websites they SHOULD <span class="delete">black</span><span class="insert">deny </span>list websites to prevent access to known malicious websites.</td>
+                </tr>
+                
+                <tr>
+                    <td>1611</td>
+                    <td>14.3.10.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies <span class="delete">black</span><span class="insert">deny </span>listing websites SHOULD update the <span class="delete">black</span><span class="insert">deny </span>list on a frequent basis to ensure that it remains effective.</td>
+                </tr>
+                
+                <tr>
+                    <td>1621</td>
+                    <td>14.3.13.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td>Users MUST NOT use agency user<span class="delete">id</span><span class="insert">ID</span> and login passwords as credentials for external websites.</td>
+                </tr>
+                
+                <tr>
+                    <td>1745</td>
+                    <td>15.2.21.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD configure the following gateway filters:
+inbound and outbound email, including any attachments, that contain:
+
+malicious code;
+content in conflict with the agency’s email policy;
+content that cannot be identified;
+<span class="insert">deny listed or unauthorised filetypes; and
+
+encrypted content, when that content cannot </span>b<span class="delete">lacklisted or unauthorised filety</span><span class="insert">e ins</span>pe<span class="delete">s</span><span class="insert">cted for malicious code or authenticated as originating from a trusted source</span>;<span class="delete"> and
+
+encrypted content,</span><span class="insert">
+emails addressed to internal email aliases</span> w<span class="delete">hen that content cannot be inspected for malicious code or authenticated as originating from a trusted source</span><span class="insert">ith source addresses located from outside the domain</span>;<span class="delete">
+emails addressed to internal email aliases</span><span class="insert"> and
+all emails arriving via an external connection</span> w<span class="delete">ith source addresses located from outside the domain; and
+all emails arriving via an external connection w</span>here the source address uses an internal agency domain name.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>3021</td>
+                    <td>17.9.25.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>The table below describes the minimum contents which SHOULD be documented in the KMP.
+
+
+Topic 
+ Content
+
+
+Objectives
+
+
+Objectives of the cryptographic system and KMP, including organisational aims.
+Refer to relevant NZCSIs.
+
+
+
+
+System description
+
+
+The environment.
+Maximum classification of information protected.
+Topology Diagram(s) and description of the cryptographic system topology including data flows.
+The use of keys.
+Key algorithm.
+Key length.
+Key lifetime.
+
+
+
+
+
+Roles and administrative responsibilities<span class="delete">.</span>
+
+
+Documents roles and responsibilities, including the:
+
+COMSEC Custodian;
+Cryptographic systems administrator;
+Record keeper; and
+Auditor<span class="insert">.</span>
+
+
+
+
+Accounting
+
+
+How accounting will be undertaken for the cryptographic system.
+What records will be maintained.
+How records will be audited.
+
+
+
+
+Classification
+
+
+Classification of the cryptographic system hardware.
+Classification of cryptographic system software.
+Classification of the cryptographic system documentation.
+
+
+
+
+Information security incidents
+
+
+A description of the conditions under which compromise of key material should be declared.
+References to procedures to be followed when reporting and dealing with information security incidents.
+
+
+
+
+
+Key management
+
+
+
+Who generates keys.
+How keys are delivered.
+How keys are received<span class="insert">.</span>
+Key distribution, including local, remote and central.
+How keys are installed.
+How keys are transferred.
+How keys are stored.
+How keys are recovered.
+How keys are revoked.
+How keys are destroyed.
+
+
+
+
+Maintenance
+
+
+Maintaining the cryptographic system software and hardware.
+Destroying equipment and media.
+
+
+
+
+References
+
+
+Vendor documentation<span class="insert">.</span>
+Related policies.
+
+
+
+
+</td>
+                </tr>
+                
+                <tr>
+                    <td>3740</td>
+                    <td>18.3.12.C.01.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must</td>
+                    <td>Agencies MUST:
+configure VTC and VoIP devices to authenticate themselves to the call controller upon registration;
+disable phone auto-registration and only allow a<span class="delete"> </span><span class="insert">n allo</span>w<span class="delete">hite</span><span class="insert"> </span>list of authorised devices to access the network;
+block unauthorised devices by default; 
+disable all unused and prohibited functionality; and
+use individual logins for IP phones.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>3741</td>
+                    <td>18.3.12.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD:
+configure VoIP phones to authenticate themselves to the call controller upon registration;
+disable phone auto-registration and <span class="delete">only</span><span class="insert">use an</span> allow <span class="delete">a white</span>list of authorised devices to access the network;
+block unauthorised devices by default; 
+disable all unused and prohibited functionality; and
+use individual logins for IP phones.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>4742</td>
+                    <td>19.5.27.C.06.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Event logs covering all VoIP and UC services SHOULD be maintained in accordance with the requirements of the NZISM. See section<span class="insert">s</span> 16.<span class="delete">5</span><span class="insert">6</span> - Event <span class="delete">l</span><span class="insert">L</span>ogging and Auditing and 13.1.12 - Archiving.</td>
+                </tr>
+                
+                <tr>
+                    <td>4752</td>
+                    <td>19.5.28.C.05.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD consider the use of <span class="delete">b</span><span class="insert">a</span>l<span class="delete">ack</span>l<span class="delete">isting</span><span class="insert">ow</span> and <span class="delete">whit</span><span class="insert">d</span>e<span class="insert">ny </span>listing to manage fraudulent calls to known fraudulent call destinations.</td>
+                </tr>
+                
+                <tr>
+                    <td>4406</td>
+                    <td>20.3.12.C.01.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must</td>
+                    <td>Agencies MUST create and enforce a<span class="insert">n</span> <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>list of permitted content types based on business requirements and the results of a security risk assessment.</td>
+                </tr>
+                
+                <tr>
+                    <td>4407</td>
+                    <td>20.3.12.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD create and enforce a<span class="insert">n</span> <span class="insert">allo</span>w<span class="delete">hite</span><span class="insert"> </span>list of permitted content types based on business requirements and the results of a security risk assessment.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+<body>
+</html>
