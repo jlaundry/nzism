@@ -5,6 +5,7 @@ import json
 import xml.etree.ElementTree as xee
 
 from jinja2 import Environment, FileSystemLoader
+jinja2_env = Environment(loader=FileSystemLoader('templates'))
 
 """
 <xml>
@@ -106,9 +107,7 @@ def compare_files(old, new, output_file):
         }
         controls_changed.append(control)
 
-    jinja2_env = Environment(loader=FileSystemLoader('templates'))
     report_template = jinja2_env.get_template('report.jinja2')
-
     rendered = report_template.render(
         old = old,
         new = new,
@@ -130,6 +129,14 @@ if __name__ == '__main__':
         for j in range(i+1, len(config)):
             new = config[j]
             print(f"Comparing {base['version']} to {new['version']}")
+            comparisons.append((base, new,))
             output_filename = f"NZISM-{base['version']}-to-{new['version']}.html"
             with open(output_filename, 'w') as output_file:
                 compare_files(base['filename'], new['filename'], output_file)
+
+    index_template = jinja2_env.get_template('index.jinja2')
+    rendered = index_template.render(
+        most_recent = [(x,y) for (x,y) in comparisons if y==base]
+    )
+    with open('index.html', 'w') as output_file:
+        output_file.write(rendered)

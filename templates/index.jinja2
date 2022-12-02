@@ -22,15 +22,9 @@
             <p>If you would like to contribute, please see <a href="https://github.com/jlaundry/nzism">https://github.com/jlaundry/nzism</a></p>
             <h2>Most recent versions:</h2>
             <ul>
-                
-                <li><a href="NZISM-3.2-to-3.6.html">NZISM 3.2 to 3.6 comparison</a></li>
-                
-                <li><a href="NZISM-3.3-to-3.6.html">NZISM 3.3 to 3.6 comparison</a></li>
-                
-                <li><a href="NZISM-3.4-to-3.6.html">NZISM 3.4 to 3.6 comparison</a></li>
-                
-                <li><a href="NZISM-3.5-to-3.6.html">NZISM 3.5 to 3.6 comparison</a></li>
-                
+                {% for c in most_recent %}
+                <li><a href="NZISM-{{ c.0.version }}-to-{{ c.1.version }}.html">NZISM {{ c.0.version }} to {{ c.1.version }} comparison</a></li>
+                {% endfor %}
             </ul>
         </section>
     </body>
