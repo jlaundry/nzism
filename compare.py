@@ -1,6 +1,7 @@
 
 import argparse
 import difflib
+import json
 import xml.etree.ElementTree as xee
 
 from jinja2 import Environment, FileSystemLoader
@@ -42,39 +43,14 @@ def diff_text(old_text, new_text):
     return ''.join(output)
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Compare NZISM versioned XML files.')
-
-    parser.add_argument(
-        '--old',
-        type=argparse.FileType('r'),
-        default="nzism-data/NZISM-FullDoc-V.3.5-January-2022.xml",
-        help='Old (previous) version to compare',
-    )
-
-    parser.add_argument(
-        '--new',
-        type=argparse.FileType('r'),
-        default="nzism-data/NZISM-FullDoc-V.3.6-September-2022.xml",
-        help='New (next) version to compare',
-    )
-
-    parser.add_argument(
-        '--output_filename',
-        type=argparse.FileType('w'),
-        default="comparison.html",
-        help='Output HTML filename',
-    )
-
-    args = parser.parse_args()
-
-    old_doc = xee.parse(args.old)
+def compare_files(old, new, output_file):
+    old_doc = xee.parse(old)
     old_cids = set()
     for el in old_doc.findall('.//paragraph[@CID]'):
         cid = int(el.attrib['CID'])
         old_cids.add(cid)
 
-    new_doc = xee.parse(args.new)
+    new_doc = xee.parse(new)
     new_cids = set()
     for el in new_doc.findall('.//paragraph[@CID]'):
         cid = int(el.attrib['CID'])
@@ -133,10 +109,27 @@ if __name__ == '__main__':
     jinja2_env = Environment(loader=FileSystemLoader('templates'))
     report_template = jinja2_env.get_template('report.jinja2')
 
-    output = report_template.render(
-        args = args,
+    rendered = report_template.render(
+        old = old,
+        new = new,
         controls_added = controls_added,
         controls_removed = controls_removed,
         controls_changed = controls_changed,
     )
-    args.output_filename.write(output)
+    output_file.write(rendered)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Compare NZISM versioned XML files.')
+
+    with open('config.json', 'r') as of:
+        config = json.load(of)
+
+    comparisons = []
+    for (i, base) in enumerate(config):
+        for j in range(i+1, len(config)):
+            new = config[j]
+            print(f"Comparing {base['version']} to {new['version']}")
+            output_filename = f"NZISM-{base['version']}-to-{new['version']}.html"
+            with open(output_filename, 'w') as output_file:
+                compare_files(base['filename'], new['filename'], output_file)

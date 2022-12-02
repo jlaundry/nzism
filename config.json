@@ -1,0 +1,27 @@
+[
+    {
+        "version": "3.2",
+        "date": "2019-01-01",
+        "filename": "nzism-data/NZISM-FullDoc-V.3.2-Jan-2019.xml"
+    },
+    {
+        "version": "3.3",
+        "date": "2020-02-01",
+        "filename": "nzism-data/NZISM-FullDoc-V.3.3-February 2020.xml"
+    },
+    {
+        "version": "3.4",
+        "date": "2020-09-01",
+        "filename": "nzism-data/NZISM-FullDoc-V.3.4-September 2020.xml"
+    },
+    {
+        "version": "3.5",
+        "date": "2022-01-01",
+        "filename": "nzism-data/NZISM-FullDoc-V.3.5-January-2022.xml"
+    },
+    {
+        "version": "3.6",
+        "date": "2022-09-01",
+        "filename": "nzism-data/NZISM-FullDoc-V.3.6-September-2022.xml"
+    }
+]
