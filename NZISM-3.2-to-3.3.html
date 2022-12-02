@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <title>NZISM Comparison</title>
+
+    <style type="text/css">
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #040477;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #040477;
+    color: white;
+}
+
+th, td {
+    padding: 0.3em;
+    text-align: left;
+}
+
+td {
+    border: 1px solid black;
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+
+span.insert {
+    text-decoration: underline;
+    background-color: mediumseagreen;
+}
+
+span.delete {
+    text-decoration: line-through;
+    background-color: firebrick;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <p>This is a report of changes between <strong>nzism-data/NZISM-FullDoc-V.3.2-Jan-2019.xml</strong> and <strong>nzism-data/NZISM-FullDoc-V.3.3-February 2020.xml</strong>.</p>
+        <ul>
+            <li><a href="#controls_added">Controls Added</a></li>
+            <li><a href="#controls_removed">Controls Removed</a></li>
+            <li><a href="#controls_changed">Controls Changed</a></li>
+        </ul>
+    </section>
+    <section id="controls_added">
+        <h1>Controls Added</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>6592</td>
+                    <td>7.2.24.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST replace compromised cryptographic keys as a matter of urgency and record the replacement in the incident reporting.</td>
+                </tr>
+                
+                <tr>
+                    <td>6553</td>
+                    <td>16.1.37.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Password and other authentication data SHOULD be hashed before storage using an approved cryptographic protocol and algorithm.</td>
+                </tr>
+                
+                <tr>
+                    <td>6560</td>
+                    <td>17.2.25.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Memorised secrets such as passwords MUST be stored in a form that is resistant to offline attacks.</td>
+                </tr>
+                
+                <tr>
+                    <td>6561</td>
+                    <td>17.2.25.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Memorised secrets such as passwords SHOULD be salted and hashed using a suitable one-way key derivation function. See 17.2.24.</td>
+                </tr>
+                
+                <tr>
+                    <td>6562</td>
+                    <td>17.2.25.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>The salt SHOULD be at least 32 bits in length, be chosen arbitrarily, and each instance is unique so as to minimise salt value collisions among stored hashes.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_removed">
+        <h1>Controls Removed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>1263</td>
+                    <td>7.3.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST follow the NZ implementation of the STIXX / TAXII and CyBox protocols and SHOULD include the following information in their register:
+the date the information security incident was discovered;
+the date the information security incident occurred;
+a description of the information security incident, including the personnel, systems and locations involved;
+the action taken;
+to whom the information security incident was reported; and
+the file reference.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1350</td>
+                    <td>8.2.5.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD use a secured server or communications room within a secured facility.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_changed">
+        <h1>Controls Changed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>127</td>
+                    <td>1.1.63.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>System owners seeking a dispensation for non-compliance with any <span class="delete">essential</span><span class="insert">baseline</span> controls in this manual MUST be granted a dispensation by their Accreditation Authority. Where High Grade Cryptographic Systems (HGCS) are implemented, the Accreditation Authority will be the Director-General GCSB or a formal delegate.</td>
+                </tr>
+                
+                <tr>
+                    <td>131</td>
+                    <td>1.1.64.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>System owners seeking a dispensation for non-compliance with <span class="delete">essential</span><span class="insert">baseline</span> controls MUST complete an agency risk assessment which documents:
+the reason(s) for not being able to comply with this manual;
+the effect on any of their own, multi-agency or All-of-Government system;
+the alternative mitigation measure(s) to be implemented;
+The strength and applicability of the alternative mitigations;
+an assessment of the residual security risk(s); and
+a date by which to review the decision.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>143</td>
+                    <td>1.1.66.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>If a system processes, stores or communicates data and information with multiple agencies or forms part of an All-of-Government system, interested parties MUST be formally consulted before non-compliance with any <span class="delete">essential</span><span class="insert">baseline</span> controls.</td>
+                </tr>
+                
+                <tr>
+                    <td>151</td>
+                    <td>1.1.68.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST retain a copy and maintain a record of the supporting risk assessment and decisions to be non-compliant with any <span class="delete">es</span><span class="insert">ba</span>se<span class="insert">li</span>n<span class="delete">tial</span><span class="insert">e</span> controls from this manual.</td>
+                </tr>
+                
+                <tr>
+                    <td>284</td>
+                    <td>3.1.8.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Where the head of a smaller agency is not able to satisfy all segregation of duty requirements because of scalability and small personnel numbers, all<span class="delete">,</span> potential conflicts of interest SHOULD be clearly identified, declared and actively managed.</td>
+                </tr>
+                
+                <tr>
+                    <td>570</td>
+                    <td>4.3.18.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>The Information Security Policy (SecPol) MUST be reviewed by the auditor to ensure that all <span class="delete">re</span><span class="insert">applicab</span>le<span class="delete">vant</span> controls specified in this manual are addressed.</td>
+                </tr>
+                
+                <tr>
+                    <td>780</td>
+                    <td>5.2.3.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>The Information Security Policy (SecPol) SHOULD document the information security<span class="delete">,</span> guidelines, standards and responsibilities of an agency.</td>
+                </tr>
+                
+                <tr>
+                    <td>1066</td>
+                    <td>6.2.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD conduct vulnerability assessments in order to establish a baseline<span class="insert">. This SHOULD be done</span>:
+before a system is first used;
+after any significant incident;
+after a significant change to the system;
+after changes to standards, policies and guidelines;<span class="delete"> and/or
+as</span><span class="insert"> 
+when</span> specified by an ITSM or <span class="delete">the </span>system owner.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1120</td>
+                    <td>6.4.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST determine availability and recovery requirements for their systems and implement <span class="delete">appropriate </span>measures<span class="insert"> consistent with the agency's SRMP</span> to support them.</td>
+                </tr>
+                
+                <tr>
+                    <td>1153</td>
+                    <td>7.1.7.C.01.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must</td>
+                    <td>Agencies MUST develop, implement and maintain tools and procedures covering the detection of potential information security incidents, incorporating:
+<span class="insert">user awareness and training;
+</span>counter-measures against malicious code<span class="insert">, known attack methods and types</span>;
+intrusion detection strategies;
+data egress monitoring & control;
+access control anomalies;
+audit analysis;
+system integrity checking; and
+vulnerability assessments.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1154</td>
+                    <td>7.1.7.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD develop, implement and maintain tools and procedures covering the detection of potential information security incidents, incorporating:
+<span class="insert">user awareness and training;
+</span>counter-measures against malicious code<span class="insert">, known attack methods and types</span>;
+intrusion detection strategies;
+data egress monitoring & control;
+access control anomalies;
+audit analysis;
+system integrity checking; and
+vulnerability assessments.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1155</td>
+                    <td>7.1.7.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD use the results of the security risk assessment to determine the appropriate balance of resources allocated to prevention versus <span class="insert">resources allocated to </span>detection of information security incidents.</td>
+                </tr>
+                
+                <tr>
+                    <td>1205</td>
+                    <td>7.2.17.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD:
+encourage personnel to note and report any observed or suspected security weaknesses in, or threats to, systems or services;
+establish and follow procedures for reporting s<span class="insert">ystem, s</span>oftware<span class="insert"> or other</span> malfunctions;
+put mechanisms in place to enable the types, volumes and costs of information security incidents and malfunctions to be quantified and monitored; and
+deal with the violation of agency information security policies and procedures by personnel through <span class="insert">training and, where warranted, </span>a formal disciplinary process.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1216</td>
+                    <td>7.2.19.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>The Agency ITSM, MUST report <span class="delete">signi</span><span class="insert">in</span>f<span class="delete">icant inf</span>ormation security incidents<span class="delete">, or incidents related to m</span><span class="insert"> categorised as:
+Critical;
+Serio</span>u<span class="insert">s; or
+incidents related to mu</span>lti-agency or government systems<span class="delete">, </span><span class="insert">;
+</span>to the NCSC (see <span class="insert">also </span>below)<span class="insert"> as soon as possible</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1220</td>
+                    <td>7.2.20.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD<span class="delete">, through an ITSM,</span> repor<span class="delete">t non-significan</span>t information security incidents <span class="insert">categorised as Low </span>to the NCSC.</td>
+                </tr>
+                
+                <tr>
+                    <td>1223</td>
+                    <td>7.2.21.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD formally report information security incidents using the NCSC <span class="delete">ad</span>o<span class="insert">n-line re</span>p<span class="insert">or</span>ti<span class="insert">ng f</span>o<span class="delete">n of the TAXII, STIX and CyBox p</span>r<span class="delete">otocols</span><span class="insert">m</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1226</td>
+                    <td>7.2.22.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies that outsource their information technology services and functions MUST ensure that the service provider <span class="insert">advises and </span>consults with the agency when an information security incident occurs.</td>
+                </tr>
+                
+                <tr>
+                    <td>1233</td>
+                    <td>7.2.23.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST notify all system users of any suspected <span class="insert">or confirmed </span>loss or compromise of keying material.</td>
+                </tr>
+                
+                <tr>
+                    <td>1237</td>
+                    <td>7.2.25.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST<span class="insert"> urgently</span> notify GCSB of any suspected loss or compromise of keying material associated with HGCE.</td>
+                </tr>
+                
+                <tr>
+                    <td>1285</td>
+                    <td>7.3.8.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>When a data spill<span class="insert"> involving classified information or contaminating classified systems</span> occurs and systems cannot be segregated or isolated agencies SHOULD immediately contact the <span class="delete">G</span><span class="insert">N</span>CS<span class="delete">B</span><span class="insert">C</span> for further advice.</td>
+                </tr>
+                
+                <tr>
+                    <td>1290</td>
+                    <td>7.3.9.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD follow the steps described below when malicious code is detected:
+isolate the infected system;
+decide whether to request assistance from <span class="delete">G</span><span class="insert">N</span>CS<span class="delete">B</span><span class="insert">C</span>;
+if such assistance is requested and agreed to, delay any further action until advised by <span class="delete">G</span><span class="insert">N</span>CS<span class="delete">B</span><span class="insert">C</span>;
+scan all previously connected systems and any media used within a set period leading up to the information security incident, for malicious code;
+isolate all infected systems and media to prevent reinfection;
+change all passwords and key material stored or potentially accessed from compromised systems, including any websites with password controlled access;
+advise system users of any relevant aspects of the compromise, including a recommendation to change all passwords on compromised systems;
+use up-to-date anti-malware software to remove the malware from the systems or media;
+monitor network traffic for malicious activity;<span class="delete"> </span>
+report the information security incident and perform any other activities specified in the IRP; and
+in the worst case scenario, rebuild and reinitialise the system.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>1300</td>
+                    <td>7.3.12.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD ensure that any requests for <span class="delete">G</span><span class="insert">N</span>CS<span class="delete">B</span><span class="insert">C</span> assistance are made as soon as possible after the information security incident is detected and that no actions which could affect the integrity of the evidence are carried out prior to <span class="delete">G</span><span class="insert">N</span>CS<span class="delete">B</span><span class="insert">C</span>’s involvement.</td>
+                </tr>
+                
+                <tr>
+                    <td>1327</td>
+                    <td>8.1.11.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD position desks, screens and keyboards <span class="delete">so that they cannot be </span><span class="insert">away from windows and doorways so that they cannot be over</span>seen by unauthorised pe<span class="delete">op</span><span class="insert">rsons.  If required, b</span>l<span class="delete">e</span><span class="insert">inds or drapes SHOULD be fixed to the inside of windows</span>, <span class="delete">or fix b</span><span class="insert">and doors kept c</span>l<span class="delete">inds or drapes to the inside of windows and away from doorways</span><span class="insert">osed to avoid oversight</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1449</td>
+                    <td>9.1.4.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agency management MUST ensure that all personnel who have access to a system have sufficient <span class="insert">training and ongoing </span>information security awareness<span class="delete"> and training</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1452</td>
+                    <td>9.1.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST provide ongoing information security awareness and <span class="delete">training</span><span class="insert">a training programme</span> for personnel on topics such as responsibilities, legislation and regulation, consequences of non-compliance with information security policies and procedures, and potential security risks and counter-measures.</td>
+                </tr>
+                
+                <tr>
+                    <td>1457</td>
+                    <td>9.1.6.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD align the detail, content and coverage of information security awareness and training <span class="insert">programmes </span>to system user responsibilities.</td>
+                </tr>
+                
+                <tr>
+                    <td>1484</td>
+                    <td>9.2.6.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies <span class="delete">M</span><span class="insert">SHO</span>U<span class="delete">ST</span><span class="insert">LD</span>:
+limit system access on a need-to-know/need-to-access basis;
+provide system users with the least amount of privileges needed to undertake their duties; and
+have any requests for access to a system authorised by the supervisor or manager of the system user.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>5626</td>
+                    <td>10.6.29.C.01.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must</td>
+                    <td>Cabinet rails MUST be installed to
+<span class="delete">§ </span>provide adequate room for patch cables and wire managers<span class="delete">
+§ A</span><span class="insert">;
+provide a</span>dequate space for cable management at front, sides, and rear<span class="delete">
+§ A</span><span class="insert">; and
+a</span>rrange switches and patch panels to minimize patching between cabinets & racks<span class="delete">
+</span><span class="insert">.
+</span></td>
+                </tr>
+                
+                <tr>
+                    <td>2767</td>
+                    <td>11.5.16.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Where the use of personal wearable devices is permitted on medical grounds and used within a corporate or agency environment, agencies MUST ensure any relevant legislation and regulation pertaining to the protection of Personally Identifiable Information (PII) is <span class="delete">properly managed and protect</span><span class="insert">follow</span>ed.</td>
+                </tr>
+                
+                <tr>
+                    <td>3460</td>
+                    <td>12.4.6.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that any firmware updates are performed in a manner that verifies the integrity and authenticity of the source and of the updating process<span class="insert"> or updating utility</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>3465</td>
+                    <td>12.4.7.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD assess the security risk of <span class="insert">continued </span>us<span class="delete">ing</span><span class="insert">e of</span> software or IT equipment when a cessation date for support is announced or when the product is no longer supported by the developer.</td>
+                </tr>
+                
+                <tr>
+                    <td>3709</td>
+                    <td>12.7.21.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>For equipment that is expected to have an extended operational life in a critical system<span class="insert">, and in the event that the supplier is no longer able to supply these</span>, agencies SHOULD provide for the acquisition of<span class="delete"> </span><span class="insert">:
+</span>necessary licences<span class="delete"> and </span><span class="insert">;
+</span>information to produce spare parts, components, assemblies<span class="delete">, </span><span class="insert">;
+</span>testing equipment<span class="delete"> and </span><span class="insert">; and
+</span>technical assistance agreements<span class="delete"> in the event that the supplier is no longer able to supply the equipment, products and essential spares</span>.<span class="insert">
+</span></td>
+                </tr>
+                
+                <tr>
+                    <td>3832</td>
+                    <td>13.1.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD undertake a risk assessment with consideration given to proportionality in respect of<span class="delete"> </span><span class="insert">:
+</span>scale and impact of the processes<span class="delete">, data, </span><span class="insert">;
+data;
+</span>users<span class="delete"> and </span><span class="insert">;
+</span>licences<span class="delete"> system and </span><span class="insert">;
+usage agreements; and
+</span>service to be migrated or decommissioned.<span class="insert">
+</span></td>
+                </tr>
+                
+                <tr>
+                    <td>2097</td>
+                    <td>17.1.37.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agenc<span class="delete">y</span><span class="insert">ies</span> MUST consult the GCSB for further advice on the powered off status and treatment of specific <span class="delete">p</span><span class="insert">softwa</span>r<span class="delete">oduc</span><span class="insert">e, sys</span>t<span class="insert">em</span>s and <span class="insert">IT eq</span>u<span class="delete">sag</span><span class="insert">ipm</span>e<span class="insert">nt</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>2148</td>
+                    <td>17.2.22.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies using ECDSA, for the approved use of digital signatures, MUST implement the curve<span class="delete">s P-256 and</span> P-384 (prime moduli).</td>
+                </tr>
+                
+                <tr>
+                    <td>2158</td>
+                    <td>17.2.26.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should Not</td>
+                    <td>Agencies using AES or 3DES SHOULD NOT use <span class="delete">e</span><span class="insert">E</span>lectronic <span class="delete">c</span><span class="insert">C</span>ode<span class="delete">b</span><span class="insert"> B</span>ook <span class="delete">m</span><span class="insert">M</span>ode<span class="insert"> (ECB)</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>2737</td>
+                    <td>17.5.9.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies that use SSH-agent or other similar key caching programs SHOULD:
+only use the software on workstation and servers with screenlocks;
+ensure that the key cache expires within four hours of inactivity; and
+ensure that agent credential forwarding is used when multiple SSH tra<span class="delete">ns</span>versal is needed.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>3617</td>
+                    <td>18.2.33.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>The effective range of wireless communications outside an agency’s area of control SHOULD be limited by:
+Minimising the output power level of wireless devices<span class="delete">; and/or</span><span class="insert">.</span>
+Implementing RF shielding within buildings in which wireless networks are used.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>3777</td>
+                    <td>18.3.17.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD use access control software to control USB ports on workstations using softphones and webcams by utilising the specific vendor and product identifier of the authorised <span class="delete">phon</span><span class="insert">devic</span>e.</td>
+                </tr>
+                
+                <tr>
+                    <td>4710</td>
+                    <td>19.5.24.C.07.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies procuring or using VoIP or UC services to be used by multiple agencies MUST ensure all interested parties formally agree t<span class="insert">o t</span>he risks,<span class="delete"> essential</span> controls and any residual risks of such VoIP and UC services.  The lead agency normally has this responsibility (see Chapter 2 - Information Security within Government and Chapter 4 - System Certification and Accreditation).</td>
+                </tr>
+                
+                <tr>
+                    <td>4715</td>
+                    <td>19.5.25.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST follow the gateway requirements described in <span class="delete">this </span>Chapter<span class="insert"> 19 - Gateway Security</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>4742</td>
+                    <td>19.5.27.C.06.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Event logs covering all VoIP and UC services SHOULD be maintained in accordance with the requirements of the NZISM.<span class="insert"> See section 16.5 - Event logging and Auditing and 13.1.12 - Archiving.</span></td>
+                </tr>
+                
+                <tr>
+                    <td>4301</td>
+                    <td>20.2.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>To prevent the export of NZEO data to foreign systems, agencies MUST implement <span class="insert">NZEO </span>data filtering performed by a product specifically designed <span class="insert">or configured </span>for that purpose.</td>
+                </tr>
+                
+                <tr>
+                    <td>4336</td>
+                    <td>20.3.8.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD perform content<span class="delete">/</span><span class="insert"> conversion, </span>file conversion<span class="insert"> or both</span> for all ingress or egress data transiting a security domain boundary.</td>
+                </tr>
+                
+                <tr>
+                    <td>4339</td>
+                    <td>20.3.9.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD perform content<span class="delete">/</span><span class="insert"> and </span>file sanitisation on suitable file types if content<span class="delete">/</span><span class="insert"> conversion or </span>file conversion is not appropriate for data transiting a security domain boundary.</td>
+                </tr>
+                
+                <tr>
+                    <td>4401</td>
+                    <td>20.3.11.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD extract the contents from archive<span class="delete">/</span><span class="insert"> and </span>container files and subject the extracted files to content filter tests.</td>
+                </tr>
+                
+                <tr>
+                    <td>4402</td>
+                    <td>20.3.11.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD perform controlled inspection of archive<span class="delete">/</span><span class="insert"> and </span>container files to ensure that content filter performance <span class="delete">or</span><span class="insert">and</span> availability is not adversely affected.</td>
+                </tr>
+                
+                <tr>
+                    <td>4406</td>
+                    <td>20.3.12.C.01.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must</td>
+                    <td>Agencies MUST<span class="delete"> identify,</span> create and enforce a whitelist of permitted content types based on business requirements and the results of a security risk assessment.</td>
+                </tr>
+                
+                <tr>
+                    <td>4407</td>
+                    <td>20.3.12.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD<span class="delete"> identify,</span> create and enforce a whitelist of permitted content types based on business requirements and the results of a security risk assessment.</td>
+                </tr>
+                
+                <tr>
+                    <td>4483</td>
+                    <td>21.1.13.C.01.</td>
+                    <td>Confidential, Secret, Top Secret</td>
+                    <td>Must</td>
+                    <td>Agencies unable to lower the storage and physical transfer requirements of a mobile device to an unclassified level through the use of encryption MUST physically <span class="insert">store or </span>transfer the device as a classified asset in accordance with the relevant handling instructions<span class="delete"> (refer to the PSR)</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>4485</td>
+                    <td>21.1.13.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies unable to lower the storage and physical transfer requirements of a mobile device to an unclassified level through the use of encryption SHOULD physically <span class="insert">store or </span>transfer the device as a classified asset in accordance with the relevant handling instructions<span class="delete"> (refer to the PSR)</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>4541</td>
+                    <td>21.2.4.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td>Agencies MUST NOT allow personnel to access or communicate classified information on mobile devices outside of secure areas unless there is a reduced chance of being overheard <span class="delete">or</span><span class="insert">and</span> having the screen of the device observed.</td>
+                </tr>
+                
+                <tr>
+                    <td>4555</td>
+                    <td>21.2.7.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Travelling personnel requested to decrypt mobile devices for inspection <span class="insert">or from whom mobile devices are taken out of sight </span>by <span class="delete">customs personnel or from whom mobile devices are taken out of sight by customs personne</span><span class="insert">border contro</span>l MUST report the potential compromise of classified information or the device to an ITSM as soon as possible.</td>
+                </tr>
+                
+                <tr>
+                    <td>4650</td>
+                    <td>21.4.10.C.16.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>The responsibility for payment of voice and data plans and roaming charges MUST be specified<span class="insert"> and agreed</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>4658</td>
+                    <td>21.4.11.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Network<span class="insert"> configuration</span> policies and authentication mechanisms MUST<span class="delete"> be configured to</span> allow access to agency resources ONLY through the BYOD network segment.</td>
+                </tr>
+                
+                <tr>
+                    <td>4666</td>
+                    <td>21.4.11.C.12.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>BYOD MUST have a Mobile Device Management (MDM) solution implemented with a minimum of the following enabled:<span class="delete"> </span>
+The MDM is enabled to “wipe” devices of any agency data if lost or stolen;
+If the MDM cannot discriminate between agency and personal data, all data, including personal data, is deleted if the device is lost or stolen;
+The MDM is capable of remotely applying agency security configurations for BYOD devices;
+Mobile device security configurations are validated (health check) by the MDM before a device is permitted to connect to the agency’s systems;
+“Jail-broken”, “rooted” or settings violations MUST be detected and isolated; 
+“Jail-broken” devices are NOT permitted to access agency resources; 
+Access to agency resources is limited until <span class="delete">the device and/or</span><span class="insert">both the device and</span> user is fully compliant with policy and SOPs;
+Auditing and logging is enabled; and
+Changes of Subscriber Identity Module (SIM) card are monitored to allow remote blocking and wiping in the event of theft or compromise.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>4667</td>
+                    <td>21.4.11.C.13.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><span class="delete">Appropriate i</span><span class="insert">I</span>ntrusion detection systems MUST be implemented.</td>
+                </tr>
+                
+                <tr>
+                    <td>4680</td>
+                    <td>21.4.12.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST implement rogue AP and wireless “hot spot” detection and implement <span class="delete">appropriate </span>response procedures<span class="insert"> where detection occurs</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>4681</td>
+                    <td>21.4.12.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD conduct a baseline survey to identify:
+<span class="delete">Known and</span><span class="insert">All</span> authorised devices and AP’s; and
+<span class="delete">K</span><span class="insert">A</span>n<span class="delete">own and</span><span class="insert">y</span> unauthorised devices and AP’s.
+</td>
+                </tr>
+                
+                <tr>
+                    <td>4686</td>
+                    <td>21.4.13.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>The use of virtual containers, sandboxes, wraps or similar mechanisms on the mobile device MUST be established for each authorised session for any organisational data.  These <span class="delete">virtual container</span><span class="insert">mechanism</span>s MUST be non-persistent and be removed at the end of each session.</td>
+                </tr>
+                
+                <tr>
+                    <td>4687</td>
+                    <td>21.4.13.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Any sensitive agency data MUST be removed<span class="delete">/</span><span class="insert"> and </span>securely deleted, or encrypted at the end of a session.</td>
+                </tr>
+                
+                <tr>
+                    <td>4690</td>
+                    <td>21.4.13.C.07.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST disable split-tunnelling when using a BYOD<span class="insert"> device</span> to connect to an agency network (See Section 21.1 – Agency Owned Mobile Devices).</td>
+                </tr>
+                
+                <tr>
+                    <td>4692</td>
+                    <td>21.4.13.C.09.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>The use of passwords or PINs to unlock the BYOD device MUST be enforced in addition to a<span class="insert">ll other agency a</span>uthentication mechanisms<span class="delete"> agency access</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>4693</td>
+                    <td>21.4.13.C.10.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><span class="insert">BYO</span>D<span class="insert"> d</span>evice passwords MUST be distinct from any agency access and authentication passwords.</td>
+                </tr>
+                
+                <tr>
+                    <td>4813</td>
+                    <td>22.1.21.C.06.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies procuring or using cloud services to be used by multiple agencies MUST ensure all interested parties formally agree the risks, <span class="delete">essential </span>controls and any residual risks of such cloud services.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+<body>
+</html>
