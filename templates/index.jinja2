@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
 
         <title>NZISM Comparison</title>
 
-        <style type="text/css">
+        <style>
             body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
             h1 {
                 color: #040477;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            td {
+                border:1px solid;
+                padding: 0.5em;
             }
         </style>
     </head>
@@ -20,12 +29,37 @@
             <h1>NZISM Comparisons</h1>
             <p>This is a collection of NZISM version comparisons.</p>
             <p>If you would like to contribute, please see <a href="https://github.com/jlaundry/nzism">https://github.com/jlaundry/nzism</a></p>
+        </section>
+        <section>
             <h2>Most recent versions:</h2>
             <ul>
                 {% for c in most_recent %}
                 <li><a href="NZISM-{{ c.0.version }}-to-{{ c.1.version }}.html">NZISM {{ c.0.version }} to {{ c.1.version }} comparison</a></li>
                 {% endfor %}
             </ul>
+        </section>
+        <section>
+            <h2>All versions:</h2>
+            <table>
+                <tr>
+                    <th>From \ To:</th>
+                    {% for v in versions[1:] %}
+                    <th>{{ v }}</th>
+                    {% endfor %}
+                </tr>
+                {% for v in versions[:-1] %}
+                    <tr>
+                        <td>{{ v }}</td>
+                        {% for w in versions[1:] %}
+                        {% if matrix[v][w] %}
+                            <td><a href="NZISM-{{v}}-to-{{w}}.html">{{v}} to {{w}}</a></td>
+                        {% else %}
+                            <td>&nbsp;</td>
+                        {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
         </section>
     </body>
 </html>

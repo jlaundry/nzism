@@ -125,7 +125,10 @@ if __name__ == '__main__':
         config = json.load(of)
 
     comparisons = []
+    versions = []
+
     for (i, base) in enumerate(config):
+        versions.append(base['version'])
         for j in range(i+1, len(config)):
             new = config[j]
             print(f"Comparing {base['version']} to {new['version']}")
@@ -134,9 +137,20 @@ if __name__ == '__main__':
             with open(output_filename, 'w') as output_file:
                 compare_files(base['filename'], new['filename'], output_file)
 
+    matrix = {}
+    for i in versions:
+        matrix[i] = {}
+        for j in versions:
+            matrix[i][j] = False
+
+    for (x,y) in comparisons:
+        matrix[x['version']][y['version']] = True
+
     index_template = jinja2_env.get_template('index.jinja2')
     rendered = index_template.render(
-        most_recent = [(x,y) for (x,y) in comparisons if y==base]
+        matrix = matrix,
+        most_recent = [(x,y) for (x,y) in comparisons if y==base],
+        versions = versions,
     )
     with open('index.html', 'w') as output_file:
         output_file.write(rendered)
