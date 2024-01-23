@@ -1,0 +1,6 @@
+{
+	"name": "Python (3.10 - Bullseye)",
+    "image": "mcr.microsoft.com/devcontainers/python:3.10-bullseye",
+	"onCreateCommand": "bash -c 'python -m venv .venv && source .venv/bin/activate && pip install --upgrade pip'",
+	"postStartCommand": "bash -c 'source .venv/bin/activate && pip install -r requirements.txt'"
+}
