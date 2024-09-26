@@ -21,6 +21,9 @@ def sortkey(title):
     
     Example: sortkey('1.1.65.C.01.') -> '001001065001'"""
     output = ""
+    # version 2 documents use C-01 instead of C.01
+    if ".C-" in title:
+        title = title.replace(".C-", ".C.")
     for x in [0,1,2,4]:
         output = "{0}{1:03d}".format(output, int(title.split(".")[x]))
     return output
@@ -44,17 +47,45 @@ def diff_text(old_text, new_text):
     return ''.join(output)
 
 
-def compare_files(old, new, output_file):
+def xpath_findall_cid(version:int) -> str:
+    if version == 1:
+        return './/paragraph[@CID]'
+    elif version == 2:
+        return './/paragraph[@cid]'
+
+
+def xpath_find_cid(version:int, cid=str) -> str:
+    if version == 1:
+        return f".//paragraph[@CID='{cid}']"
+    elif version == 2:
+        return f".//paragraph[@cid='{cid}']"
+
+
+def compare_files(old, old_fileversion, new, new_fileversion, output_file):
+
+    attributes = {
+        1: {
+            "CID": "CID",
+            "classifications": "classifications",
+            "compliances": "compliances",
+        },
+        2: {
+            "CID": "cid",
+            "classifications": "classification",
+            "compliances": "compliance",
+        }
+    }
+
     old_doc = xee.parse(old)
     old_cids = set()
-    for el in old_doc.findall('.//paragraph[@CID]'):
-        cid = int(el.attrib['CID'])
+    for el in old_doc.findall(xpath_findall_cid(old_fileversion)):
+        cid = int(el.attrib[attributes[old_fileversion]['CID']])
         old_cids.add(cid)
 
     new_doc = xee.parse(new)
     new_cids = set()
-    for el in new_doc.findall('.//paragraph[@CID]'):
-        cid = int(el.attrib['CID'])
+    for el in new_doc.findall(xpath_findall_cid(new_fileversion)):
+        cid = int(el.attrib[attributes[new_fileversion]['CID']])
         new_cids.add(cid)
 
     controls_added = []
@@ -63,27 +94,27 @@ def compare_files(old, new, output_file):
 
     # List of controls added
     for cid in list(new_cids - old_cids):
-        el = new_doc.find(f".//paragraph[@CID='{cid}']")
+        el = new_doc.find(xpath_find_cid(new_fileversion, cid))
 
         control = {
             "CID": cid,
             "sortkey": sortkey(el.attrib['title']),
             "title": el.attrib['title'],
-            "classifications": el.attrib['classifications'],
-            "compliances": el.attrib['compliances'],
+            "classifications": el.attrib[attributes[new_fileversion]['classifications']],
+            "compliances": el.attrib[attributes[new_fileversion]['compliances']],
             "text": el.text,
         }
         controls_added.append(control)
 
     # List of controls removed
     for cid in list(old_cids - new_cids):
-        el = old_doc.find(f".//paragraph[@CID='{cid}']")
+        el = old_doc.find(xpath_find_cid(old_fileversion, cid))
 
         control = {
             "CID": cid,
             "sortkey": sortkey(el.attrib['title']),
             "title": el.attrib['title'],
-            "classifications": el.attrib['classifications'],
+            "classifications": el.attrib[attributes[old_fileversion]['classifications']],
             "compliances": el.attrib['compliances'],
             "text": el.text,
         }
@@ -91,8 +122,8 @@ def compare_files(old, new, output_file):
 
     # List of controls changed
     for cid in list(old_cids & new_cids):
-        old_el = old_doc.find(f".//paragraph[@CID='{cid}']")
-        new_el = new_doc.find(f".//paragraph[@CID='{cid}']")
+        old_el = old_doc.find(xpath_find_cid(old_fileversion, cid))
+        new_el = new_doc.find(xpath_find_cid(new_fileversion, cid))
 
         if old_el.text == new_el.text:
             continue
@@ -101,8 +132,8 @@ def compare_files(old, new, output_file):
             "CID": cid,
             "sortkey": sortkey(new_el.attrib['title']),
             "title": new_el.attrib['title'],
-            "classifications": new_el.attrib['classifications'],
-            "compliances": new_el.attrib['compliances'],
+            "classifications": new_el.attrib[attributes[new_fileversion]['classifications']],
+            "compliances": new_el.attrib[attributes[new_fileversion]['compliances']],
             "text": diff_text(old_el.text, new_el.text),
         }
         controls_changed.append(control)
@@ -135,7 +166,7 @@ if __name__ == '__main__':
             comparisons.append((base, new,))
             output_filename = f"NZISM-{base['version']}-to-{new['version']}.html"
             with open(output_filename, 'w') as output_file:
-                compare_files(base['filename'], new['filename'], output_file)
+                compare_files(base['filename'], base['fileversion'], new['filename'], new['fileversion'], output_file)
 
     matrix = {}
     for i in versions:
