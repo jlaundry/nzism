@@ -7,6 +7,9 @@ import xml.etree.ElementTree as xee
 from jinja2 import Environment, FileSystemLoader
 jinja2_env = Environment(loader=FileSystemLoader('templates'))
 
+from bs4 import BeautifulSoup
+
+
 """
 <xml>
 	<chapter title="1. About information security">
@@ -29,8 +32,19 @@ def sortkey(title):
     return output
 
 
-def diff_text(old_text, new_text):
+def diff_text(old_markup, new_markup):
     """Returns a HTML-formatted string with differences between old and new text."""
+
+    text_changed = False
+
+    old_text = ""
+    for string in BeautifulSoup(old_markup, features="html.parser").stripped_strings:
+        old_text += string
+
+    new_text = ""
+    for string in BeautifulSoup(new_markup, features="html.parser").stripped_strings:
+        new_text += string
+
     sequence = difflib.SequenceMatcher(None, old_text, new_text)
     output = []
     for opcode, a0, a1, b0, b1 in sequence.get_opcodes():
@@ -38,13 +52,20 @@ def diff_text(old_text, new_text):
             output.append(sequence.a[a0:a1])
         elif opcode == 'insert':
             output.append("<span class=\"insert\">{}</span>".format(sequence.b[b0:b1]))
+            text_changed = True
         elif opcode == 'delete':
-            output.append("<span class=\"delete\">{}</span>".format(sequence.a[a0:a1]))
+            if sequence.a[a0:a1].strip() == "":
+                # Don't bother with whitespace changes
+                pass
+            else:
+                output.append("<span class=\"delete\">{}</span>".format(sequence.a[a0:a1]))
+                text_changed = True
         elif opcode == 'replace':
             output.append("<span class=\"delete\">{}</span><span class=\"insert\">{}</span>".format(sequence.a[a0:a1], sequence.b[b0:b1]))
+            text_changed = True
         else:
             raise RuntimeError("unexpected opcode")
-    return ''.join(output)
+    return (''.join(output), text_changed)
 
 
 def xpath_findall_cid(version:int) -> str:
@@ -128,13 +149,17 @@ def compare_files(old, old_fileversion, new, new_fileversion, output_file):
         if old_el.text == new_el.text:
             continue
 
+        (text, text_changed) = diff_text(old_el.text, new_el.text)
+        if not text_changed:
+            continue
+
         control = {
             "CID": cid,
             "sortkey": sortkey(new_el.attrib['title']),
             "title": new_el.attrib['title'],
             "classifications": new_el.attrib[attributes[new_fileversion]['classifications']],
             "compliances": new_el.attrib[attributes[new_fileversion]['compliances']],
-            "text": diff_text(old_el.text, new_el.text),
+            "text": text,
         }
         controls_changed.append(control)
 
