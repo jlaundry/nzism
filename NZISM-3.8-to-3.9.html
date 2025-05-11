@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>NZISM Comparison</title>
+
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #040477;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #040477;
+    color: white;
+}
+
+th, td {
+    padding: 0.3em;
+    text-align: left;
+}
+
+td {
+    border: 1px solid black;
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+
+span.insert {
+    text-decoration: underline;
+    background-color: mediumseagreen;
+}
+
+span.delete {
+    text-decoration: line-through;
+    background-color: firebrick;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <p>This is a report of changes between <strong>nzism-data/NZISM-ISM Document-V.-3.8-September-2024.xml</strong> and <strong>nzism-data/NZISM-ISM Document-V.-3.9-April-2025.xml</strong>.</p>
+        <ul>
+            <li><a href="#controls_added">Controls Added</a></li>
+            <li><a href="#controls_removed">Controls Removed</a></li>
+            <li><a href="#controls_changed">Controls Changed</a></li>
+        </ul>
+    </section>
+    <section id="controls_added">
+        <h1>Controls Added</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>7536</td>
+                    <td>7.2.20.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD formally share post-incident review reports by emailing them to <a title="NCSC incidents" href="mailto:incidents@ncsc.govt.nz">incidents@ncsc.govt.nz</a>.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7537</td>
+                    <td>11.8.13.C.01.</td>
+                    <td>Top Secret, Secret, Confidential</td>
+                    <td>Should</td>
+                    <td><p>Use of MFDs for printing, scanning, and copying purposes SHOULD be centrally logged.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7541</td>
+                    <td>16.1.25.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD design and implement Zero Trust principles and architecture to strengthen identification management.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7542</td>
+                    <td>16.1.27.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td><p>Agencies MUST NOT use shared credentials to access administrator or privileged access accounts.</p>
+<p>NB: Break Glass accounts are exempt from this control. For further guidance on Break Glass accounts see Emergency accounts (Break Glass accounts section).</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7543</td>
+                    <td>16.1.30.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD assess and determine the risk of centralised access management systems, including SSO, to safely manage integration into systems and when using FIM.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7544</td>
+                    <td>16.1.31.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Agencies MUST ensure adequate password policies are implemented and enforced across all systems.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7545</td>
+                    <td>16.1.31.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Agencies MUST implement a password policy enforcing <strong>at least annual</strong> password changes on systems that <strong>have not</strong> implemented MFA or passwordless authentication.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7546</td>
+                    <td>16.1.31.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Agencies MUST implement a password policy enforcing:</p>
+<ul>
+<li>A minimum password length of 16 characters (e.g four words).</li>
+<li>Passwords must be <strong>long, strong and unique</strong>. This means passwords must be a minimum character length, and are a combination of unique random words, characters or numbers.</li>
+</ul>
+<p>NB: no explicit complexity requirements are enforced (e.g. numbers or special characters), however passwords must be unique, or random and <strong>may</strong> include special characters and numbers to achieve this.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7547</td>
+                    <td>16.1.31.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>To ensure security of systems are not weakened through authentication mechanisms, at a minimum, agencies MUST:</p>
+<ul>
+<li>apply MFA appropriately (refer to controls in Section 16.7);</li>
+<li>ensure authentication secrets (including passwords) are securely stored;</li>
+<li>remove knowledge-based questions from authentication process (eg, dog’s name, first school etc.);</li>
+<li>new passwords are screened to reduce the likelihood of previously compromised passwords;</li>
+<li>remove hints from authentication process; and</li>
+<li>change passwords when a suspected or known compromise of an account has occurred.</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>7548</td>
+                    <td>16.1.31.C.06.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD consider the use of location-based factors in the authentication process, (e.g., Users must be at an expected location (city, country, IP address) and provide the correct credentials for the authentication to succeed).</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7549</td>
+                    <td>16.1.31.C.07.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>When creating password policies, agencies SHOULD consider implementing annual password changes.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7562</td>
+                    <td>16.1.34.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Passwords and other authentication secrets MUST be stored securely including being:</p>
+<ul>
+<li>salted (32 bits or more),
+<ul>
+<li>salts should be unique to each password and should be randomly generated.</li>
+</ul>
+</li>
+<li>hashed (HMAC using SHA-2/3), and</li>
+<li>“stretched” (such as PBKDF2 with at least:
+<ul>
+<li>600k iterations with internal hash function of HMAC-SHA-256; or</li>
+<li>210k iterations with internal hash function of HMAC-SHA-512).</li>
+</ul>
+</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>7551</td>
+                    <td>16.1.36.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Where passwords are not set by the account holder, agencies MUST use temporary passwords when resetting system user accounts.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7552</td>
+                    <td>16.1.36.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should Not</td>
+                    <td><p>Agencies SHOULD NOT use single factor authentication when changing users’ Multi-Factor Authentication details.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7558</td>
+                    <td>16.1.37.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Password managers provide no additional security to the sign-in password. Agencies using password managers MUST ensure sign-in passwords adhere to the password security policies used by the organisation.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7559</td>
+                    <td>16.1.37.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies using password managers SHOULD consider the use of MFA to access the password manager.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7556</td>
+                    <td>16.1.38.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>When moving to passwordless authentication, agencies SHOULD carry out a risk assessment and evaluate passwordless authentication models to choose authentication mechanisms and factors that best fit the organisation’s security and authentication requirements.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7554</td>
+                    <td>16.1.39.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Agencies MUST ensure authentication methods that are susceptible to replay attacks are disabled.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7550</td>
+                    <td>16.4.37.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p><span class="NormalTextRun SCXW132241447 BCX8">Agencies</span> <span class="NormalTextRun SCXW132241447 BCX8">SHOULD</span><span class="NormalTextRun SCXW132241447 BCX8"> consider the use of </span><span class="NormalTextRun SCXW132241447 BCX8">time bound revocation to privileged accounts.</span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7553</td>
+                    <td>16.4.39.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p><span class="TextRun Highlight SCXW17435025 BCX8"><span class="NormalTextRun SCXW17435025 BCX8">Agencies</span> </span><span class="TextRun Highlight SCXW17435025 BCX8"><span class="NormalTextRun SCXW17435025 BCX8">MUST </span><span class="NormalTextRun SCXW17435025 BCX8">investigate any </span><span class="NormalTextRun SCXW17435025 BCX8">indication</span><span class="NormalTextRun SCXW17435025 BCX8"> of compromise or misuse </span><span class="NormalTextRun SCXW17435025 BCX8">of systems credentials or accounts</span></span><span class="TextRun Highlight SCXW17435025 BCX8"><span class="NormalTextRun SCXW17435025 BCX8">.</span></span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7555</td>
+                    <td>16.5.12.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p><span class="TextRun Highlight SCXW162426022 BCX8"><span class="NormalTextRun SCXW162426022 BCX8">Agencies</span> <span class="NormalTextRun SCXW162426022 BCX8">SHOULD use Zero Trust principles alongside the use of VPN connections to enhance the security posture of the </span><span class="NormalTextRun SCXW162426022 BCX8">organisation</span><span class="NormalTextRun SCXW162426022 BCX8">.</span><span class="NormalTextRun SCXW162426022 BCX8"> This should include removing the ability for a standard user to disable the VPN connection.</span></span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7557</td>
+                    <td>16.6.13.C.05.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p><span class="TextRun Highlight SCXW250297705 BCX8"><span class="NormalTextRun SCXW250297705 BCX8">Agencies</span><span class="NormalTextRun SCXW250297705 BCX8"> should prioritise their log retention </span><span class="NormalTextRun SCXW250297705 BCX8">requirements based on the risks surrounding their most sensitive systems</span><span class="NormalTextRun SCXW250297705 BCX8">.</span></span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7560</td>
+                    <td>16.6.15.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p><span class="TextRun Highlight SCXW245238288 BCX8"><span class="NormalTextRun SCXW245238288 BCX8">Agencies</span><span class="NormalTextRun SCXW245238288 BCX8"> SHOULD have a monitoring solution implemented that enables detection of incidents as they occur so that </span><span class="NormalTextRun SCXW245238288 BCX8">appropriate responses</span><span class="NormalTextRun SCXW245238288 BCX8"> can be taken in adequate </span><span class="NormalTextRun SCXW245238288 BCX8">timeframes</span><span class="NormalTextRun SCXW245238288 BCX8">.</span></span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7561</td>
+                    <td>16.6.15.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p><span class="TextRun Highlight SCXW216480023 BCX8"><span class="NormalTextRun SCXW216480023 BCX8">Agencies</span><span class="NormalTextRun SCXW216480023 BCX8"> SHOULD have systems available for processing system event logs to </span><span class="NormalTextRun SCXW216480023 BCX8">identify</span><span class="NormalTextRun SCXW216480023 BCX8"> and correlate events which </span><span class="NormalTextRun SCXW216480023 BCX8">indicate</span><span class="NormalTextRun SCXW216480023 BCX8"> behavioural anomalies or potential security compromise in the systems, in a near real-time manner.</span></span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7563</td>
+                    <td>16.7.42.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Where an agency has external facing systems, cloud-based services, or is authenticating to third-party services services, they MUST:</p>
+<ul>
+<li>require MFA for all user accounts; and</li>
+<li>implement a secure, multi-factor process to allow entities to reset their standard user credentials.</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>7564</td>
+                    <td>16.7.42.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><p>Agencies MUST implement MFA on all user accounts with <strong>remote</strong> access to organisational resources.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7565</td>
+                    <td>16.7.42.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD implement MFA on all user accounts with access to organisational resources.<span style="font-size: 10.5pt; font-family: &#039;Open Sans&#039;,sans-serif; mso-bidi-font-family: &#039;Times New Roman&#039;; color: windowtext; mso-ansi-language: EN-AU; mso-fareast-language: EN-AU;"> </span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7566</td>
+                    <td>16.7.42.C.05.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Where agencies have implemented MFA, they SHOULD implement phishing-resistant MFA on administration accounts.<span style="font-size: 10.5pt; font-family: &#039;Open Sans&#039;,sans-serif; mso-bidi-font-family: &#039;Times New Roman&#039;; color: windowtext; mso-ansi-language: EN-AU; mso-fareast-language: EN-AU;"> </span></p></td>
+                </tr>
+                
+                <tr>
+                    <td>7567</td>
+                    <td>16.7.42.C.06.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD use phishing-resistant MFA when authenticating users to systems.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7538</td>
+                    <td>18.2.9.C.01.</td>
+                    <td>Secret, Confidential, Top Secret</td>
+                    <td>Must</td>
+                    <td><p>EAP-TLS or PEAP-EAP-TLS MUST be used on wireless networks to perform mutual authentication.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7539</td>
+                    <td>18.2.19.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td><p>Agencies MUST NOT use Wi-Fi Protected Access (WPA) for wireless deployments.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>7540</td>
+                    <td>18.2.19.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD use Wi-Fi Protected Access 3 (WPA3) for wireless deployments with preference given to WPA3-Enterprise 192-bit mode.</p></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_removed">
+        <h1>Controls Removed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>1223</td>
+                    <td>7.2.21.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p class="Normal-nonumbering">Agencies SHOULD formally report information security incidents using the NCSC on-line reporting form.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>3052</td>
+                    <td>11.6.72.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td><p>Any RFID tags of class 3, 4, or 5 MUST NOT be permitted in secure spaces.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>3054</td>
+                    <td>11.6.72.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td><p>RFID readers MUST NOT be permitted in secure spaces.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>3055</td>
+                    <td>11.6.72.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should Not</td>
+                    <td><p>Class 2 RFID tags SHOULD NOT be permitted in secure spaces.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>1857</td>
+                    <td>16.1.40.C.01.</td>
+                    <td>Secret, Top Secret, Confidential</td>
+                    <td>Must</td>
+                    <td><p>Agencies MUST implement a password policy enforcing:</p><ul>
+<li>a minimum password length of ten characters, consisting of at least three of the following character sets:
+<ul>
+<li>lowercase characters (a-z);</li>
+<li>uppercase characters (A-Z);</li>
+<li>digits (0-9); and</li>
+<li>punctuation and special characters.</li>
+</ul>
+</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>1858</td>
+                    <td>16.1.40.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD implement a password policy enforcing either:</p><ul>
+<li>a minimum password length of 16 characters with no complexity requirement; or</li>
+<li>a minimum password length of ten characters, consisting of at least three of the following character sets:
+<ul>
+<li>lowercase characters (a-z);</li>
+<li>uppercase characters (A-Z);</li>
+<li>digits (0-9); and</li>
+<li>punctuation and special characters.</li>
+</ul>
+</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>1868</td>
+                    <td>16.1.41.C.01.</td>
+                    <td>Confidential, Top Secret, Secret</td>
+                    <td>Must</td>
+                    <td><p>Agencies MUST:</p><ul>
+<li>ensure that passwords are changed at least every 90 days;</li>
+<li>prevent system users from changing their password more than once a day;</li>
+<li>check passwords for compliance with their password selection policy where the system cannot be configured to enforce complexity requirements; and</li>
+<li>force the system user to change an expired password on initial logon or if reset.</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>1870</td>
+                    <td>16.1.41.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD:</p><ul>
+<li>ensure that passwords are changed at least every 90 days;</li>
+<li>prevent system users from changing their password more than once a day;</li>
+<li>check passwords for compliance with their password selection policy where the system cannot be configured to enforce complexity requirements; and</li>
+<li>force the system user to change an expired password on initial logon or if the password is reset.</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>1871</td>
+                    <td>16.1.41.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Should Not</td>
+                    <td><p>Agencies SHOULD NOT:</p><ul>
+<li>allow predictable reset passwords;</li>
+<li>reuse passwords when resetting multiple accounts;</li>
+<li>store passwords in the clear on the system;</li>
+<li>allow passwords to be reused within eight password changes; and</li>
+<li>allow system users to use sequential passwords.</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>1893</td>
+                    <td>16.1.46.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD:</p><ul>
+<li>lock system user accounts after three failed logon attempts;</li>
+<li>have a system administrator reset locked accounts;</li>
+<li>remove or suspend system user accounts as soon as possible when personnel no longer need access due to changing roles or leaving the agency; and</li>
+<li>remove or suspend inactive accounts after a specified number of days.</li>
+</ul></td>
+                </tr>
+                
+                <tr>
+                    <td>1904</td>
+                    <td>16.1.49.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD configure systems to display the date and time of the system user’s previous login during the login process.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>1909</td>
+                    <td>16.1.50.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should Not</td>
+                    <td><p>Agencies SHOULD NOT permit the display of last logged on username, credentials or other identifying details.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>1910</td>
+                    <td>16.1.50.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should Not</td>
+                    <td><p>Agencies SHOULD NOT permit the caching of credentials unless specifically required.</p></td>
+                </tr>
+                
+                <tr>
+                    <td>1946</td>
+                    <td>16.3.5.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td><p>Agencies SHOULD:</p><ul>
+<li>ensure strong change management practices are implemented;</li>
+<li>ensure that the use of privileged accounts is controlled and accountable;</li>
+<li>ensure that system administrators are assigned an individual account for the performance of their administration tasks;</li>
+<li>keep privileged accounts to a minimum; and</li>
+<li>allow the use of privileged accounts for administrative work only.</li>
+</ul></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+
+    <section id="controls_changed">
+        <h1>Controls Changed</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>CID</th>
+                    <th>Title</th>
+                    <th>Classifications</th>
+                    <th>Compliances</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>1154</td>
+                    <td>7.1.7.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD develop, implement and maintain tools and procedures covering the detection of potential information security incidents, incorporating:user awareness and training;counter-measures against malicious code, known attack methods and types;intrusion detection strategies;d<span class="insert">ynamic network defence (i.e. protective DNS and/or NGFW)d</span>ata egress monitoring & control;access control anomalies;audit analysis;system integrity checking; andvulnerability assessments.</td>
+                </tr>
+                
+                <tr>
+                    <td>1216</td>
+                    <td>7.2.20.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>The Agency ITSM, MUST report information security incidents categorised as:Critical;Serious; orincidents related to multi-agency or government systems;to the NCSC <span class="delete">(see also </span><span class="insert">as soon as possi</span>b<span class="delete">elo</span><span class="insert">le.A Report Form is provided on the NCSC </span>w<span class="delete">) as soon as possi</span><span class="insert">e</span>b<span class="delete">le.</span><span class="insert">site under Reporting an Incident atReport an incident and request support | National Cyber Security Centre</span></td>
+                </tr>
+                
+                <tr>
+                    <td>1220</td>
+                    <td>7.2.20.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD report information security incidents categorised asLowto the NCSC.<span class="insert">AReport Form is provided on the NCSC website under Reporting an Incident atReport an incident and request support | National Cyber Security Centre</span></td>
+                </tr>
+                
+                <tr>
+                    <td>1271</td>
+                    <td>7.3.7.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST implement procedures and processes to detect data spills<span class="insert"> or data breach</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1274</td>
+                    <td>7.3.7.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agency SOPs MUST include procedure for:all personnel with access to systems;notification to the ITSM of any data spillage<span class="insert"> or breaches</span>;<span class="delete"> </span><span class="insert"> </span>andnotification to the ITSM of access to any data which they are not authorised to access.</td>
+                </tr>
+                
+                <tr>
+                    <td>1275</td>
+                    <td>7.3.7.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST document procedures for dealing with data spills<span class="insert"> or data breaches</span> in their IRP.</td>
+                </tr>
+                
+                <tr>
+                    <td>1276</td>
+                    <td>7.3.7.C.05.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST treat any data spill<span class="insert"> or data breach</span> as an information security incident and follow the IRP to deal with it.</td>
+                </tr>
+                
+                <tr>
+                    <td>1277</td>
+                    <td>7.3.7.C.06.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>When a data spill<span class="insert"> or data breach</span> occurs agencies MUST report the details <span class="delete">of the data spill </span>to the<span class="insert"> Privacy Commissioner and</span> information owner<span class="insert"> in accordance with thePrivacy Act 2020</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1285</td>
+                    <td>7.3.8.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>When a data spill <span class="delete">involving classified information or contamination </span><span class="insert">or data breach involving classified or sensitive information or contamination</span>of classified systems occurs and systems cannot be segregated, or isolated agencies SHOULD immediately contact theNCSCfor further advice.</td>
+                </tr>
+                
+                <tr>
+                    <td>1290</td>
+                    <td>7.3.9.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD follow the steps described below when malicious code is detected:isolate the infected system;decide whether to request assistance fromNCSC;if such assistance is requested and agreed to, delay any further action until advised byNCSC;<span class="delete">scan all</span><span class="insert">check connected systems and media including backups for malicious code;isolate all infected systems and media to</span> prev<span class="delete">iously connected systems and any media used within a set period leadi</span><span class="insert">ent reinfection;cha</span>ng<span class="delete"> up to the information security incident</span><span class="insert">e all passwords and key material stored or potentially accessed from compromised systems</span>, <span class="delete">for malicious code</span><span class="insert">including any websites with password controlled access</span>;<span class="delete">isolate all infected systems and media to pre</span><span class="insert">ad</span>v<span class="delete">ent reinfection</span><span class="insert">ise system users of any relevant aspects of the compromise, including a recommendation to change all passwords on compromised systems</span>;<span class="delete">change all passwords and </span><span class="insert">revo</span>ke<span class="delete">y material stored or potentially accessed from compromised systems, including any websites with password controlled access</span><span class="insert"> all session tokens associated with user and/or device</span>;<span class="delete">ad</span><span class="insert">use up-to-date anti-malware software to remo</span>v<span class="delete">ise system users of any rele</span><span class="insert">e the malware from the systems or media;monitor network traffic for malicious acti</span>v<span class="delete">ant aspects of the compromise, including a recommendation to change all passwords on compromised systems</span><span class="insert">ity</span>;<span class="delete">use up-to-date anti-malware software to remove the malware from the systems or media;monitor network traffic for malicious activity;</span><span class="insert">record and </span>report the information security incident and perform any other activities specified in the IRP; andin <span class="delete">the worst case scenario,</span><span class="insert">certain scenarios</span> rebuild<span class="delete"> and reinitialise the system</span><span class="insert">ing and reinitialising the system and/or user profile may be required</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1294</td>
+                    <td>7.3.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies considering allowing an attacker to continue some actions under controlled conditions for the purpose of seeking further information or evidence <span class="insert">MU</span>S<span class="delete">HOULD </span><span class="insert">T</span>seek legal advice.</td>
+                </tr>
+                
+                <tr>
+                    <td>1403</td>
+                    <td>8.4.10.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that when secure areas are non-operational or when work areas are unoccupied IT equipment with media is secured in accordance with the minimum physical security requirements for storing classified information as specified in thePSR Management protocol for physical security<span class="insert">with supporting document</span> –<span class="delete">Physical </span>S<span class="delete">ecurity for</span><span class="insert">torage requirements for electronic information in</span> ICT<span class="delete">, with supporting document –Storage requirements for electronic information in ICT</span> facilities.</td>
+                </tr>
+                
+                <tr>
+                    <td>1829</td>
+                    <td>16.1.26.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that all system users are:uniquely identifiable; andauth<span class="insert">orisedand auth</span>enticated on each occasion that access is granted to a system.</td>
+                </tr>
+                
+                <tr>
+                    <td>1837</td>
+                    <td>16.1.28.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>If agencies choose to allow shared, non user-specific accounts they MUST ensure that an independent means of determining the identification of the system user is implemented<span class="insert"> and logged</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1841</td>
+                    <td>16.1.29.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD <span class="delete">ensure that they combine the </span>use<span class="delete"> of</span> multi<span class="delete">ple</span><span class="insert">-factor</span> <span class="delete">me</span><span class="insert">au</span>th<span class="insert">enticati</span>o<span class="delete">ds</span><span class="insert">n (MFA)</span> when identifying and authenticating system users.</td>
+                </tr>
+                
+                <tr>
+                    <td>1869</td>
+                    <td>16.1.31.C.05.</td>
+                    <td>All Classifications</td>
+                    <td>Must Not</td>
+                    <td>Agencies MUST NOT:allow predictable reset passwords;<span class="insert">store passwords in the clear on the system; and</span>reuse passwords when resetting multiple accounts<span class="delete">;store passwords in the clear on the system;allow passwords to be reused within eight password changes; andallow system users to use sequential passwords</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1847</td>
+                    <td>16.1.33.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure that system authentication data is protected when in transit on <span class="insert">org</span>a<span class="delete">ge</span>n<span class="delete">cy</span><span class="insert">isation</span> networks or All-of-Government systems.</td>
+                </tr>
+                
+                <tr>
+                    <td>6553</td>
+                    <td>16.1.34.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Password and other authentication <span class="delete">da</span><span class="insert">secre</span>t<span class="delete">a</span><span class="insert">s</span> <span class="insert">MU</span>S<span class="delete">HOULD</span><span class="insert">T</span> be hashed before storage using an approved cryptographic protocol and algorithm.<span class="insert">See Chapter 17 – Cryptography.</span></td>
+                </tr>
+                
+                <tr>
+                    <td>1875</td>
+                    <td>16.1.36.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST ensure system users provide sufficient evidence to <span class="insert">pro</span>ve<span class="delete">rif</span><span class="insert"> the</span>y <span class="delete">their i</span><span class="insert">are the owner of the account when requesting a passwor</span>d<span class="delete">entit</span><span class="insert"> reset for their s</span>y<span class="delete"> when requesting a password reset for their system account</span><span class="insert">stem account or making changes to their multi-factor authenticators</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>1878</td>
+                    <td>16.1.39.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies <span class="insert">MU</span>S<span class="delete">HOULD</span><span class="insert">T</span> disable LAN Manager for password authentication on workstations and servers.</td>
+                </tr>
+                
+                <tr>
+                    <td>1881</td>
+                    <td>16.1.40.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD develop and implement a policy to automatically logout and shutdown workstations after an appropriate time of inactivity.<span class="insert"> This includes invalidating any session tokens.</span></td>
+                </tr>
+                
+                <tr>
+                    <td>1885</td>
+                    <td>16.1.41.C.01.</td>
+                    <td>Confidential, Top Secret, Secret</td>
+                    <td>Must</td>
+                    <td>Agencies MUST:configure systems with a s<span class="delete">ession or scree</span><span class="insert">creen and sessio</span>n lock;configure the lock to activate:after a maximum of 10 minutes of system user inactivity; orif manually activated by the system user;configure the lock to completely conceal all information on the screen;ensure that the screen is not turned off or enters a power saving state before the screen or session lock is activated;have the <span class="delete">system user reauthenticate to unlock the system; anddeny system</span><span class="insert">user reauthenticate to unlock the system; and deny</span> users the ability to disable the locking mechanism.</td>
+                </tr>
+                
+                <tr>
+                    <td>1886</td>
+                    <td>16.1.41.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agencies SHOULD:configure systems with a session or screen lock;configure the lock to activate:after a maximum of 1<span class="delete">5</span><span class="insert">0</span> minutes of system user inactivity; orif manually activated by the system user;configure the lock to completely conceal all information on the screen;ensure that the screen is not turned off or enters a power saving state before the screen or session lock is activated;have the system user reauthenticate to unlock the system; anddeny system users the ability to disable the locking mechanism.</td>
+                </tr>
+                
+                <tr>
+                    <td>1892</td>
+                    <td>16.1.42.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST:Record all successful and failed logon attempts;lock system user accounts after three failed logon attempts;<span class="insert">use a temporary lock out feature to unlock system (max [] times);</span>have a system administrator reset locked accounts<span class="insert"> if [] times is superseded</span>;remove or suspend system user accounts as soon as possible when personnel no longer need access due to changing roles or leaving the <span class="delete">agency</span><span class="insert">organisation</span>; andremove or suspend inactive accounts after a specified number of days.<span class="insert">NB: Agencies can determine the risk of using a temporary lock out feature on their specific systems.[] indicates the chosen 'value of times' an agency has decided to use for the temporary lock out feature.</span></td>
+                </tr>
+                
+                <tr>
+                    <td>1930</td>
+                    <td>16.2.4.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies<span class="delete"> </span><span class="insert">MU</span>S<span class="delete">HOULD </span><span class="insert">T</span>follow<span class="delete"> the process </span><span class="insert">adefinedprocess for developing an access control list, such asdescribed</span>in the table below<span class="delete"> for developing an access control list</span>.StageDescription1Establish groups of all system resources based on similar securityobjectives.2Determinethe information owner for each group of resources.3Obtain agreement from system owners.4Establish groups encompassing all system users based on similar functions or security objectives.5Determine the group owner or manager for each group of system users.6Determine the degree of access to the resource for each system user group<span class="insert">, incorporating the principal of least-privilege access</span>.7Decide on the level of access for security administration, based on the internal security policy.8Identify any classification, protective markings<span class="delete"> and releasability indicators</span>,<span class="insert"> and releasability indicators</span> (such as NZEO or compartmented information).</td>
+                </tr>
+                
+                <tr>
+                    <td>1945</td>
+                    <td>16.3.5.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies MUST:ensure strong change management practices are implemented;ensure that the use of privileged accounts is controlled and accountable;ensure that system administrators are assigned<span class="insert">,</span> and consistently use, an individual account for the performance of their administration tasks;keep privileged accounts to a minimum; andallow the use of privileged accounts for administrative work only.</td>
+                </tr>
+                
+                <tr>
+                    <td>1953</td>
+                    <td>16.3.7.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Agenciesinvolved in frequent transfers of data from another system to their system with a lesser classificationSHOULD<span class="delete"> clear at </span><span class="insert">ensure at</span>least one privileged user<span class="delete"> to </span><span class="insert">has a security clearance levelcommensurate</span>the classification of the higher system.</td>
+                </tr>
+                
+                <tr>
+                    <td>6837</td>
+                    <td>16.4.36.C.03.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>AgenciesMUST manage <span class="delete">P</span><span class="insert">p</span>rivileged <span class="delete">A</span><span class="insert">a</span>ccounts in accordance with the <span class="delete">A</span><span class="insert">a</span>gency’s PAM <span class="delete">P</span><span class="insert">p</span>olicy.</td>
+                </tr>
+                
+                <tr>
+                    <td>6843</td>
+                    <td>16.4.37.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Agencies<span class="insert">MU</span>S<span class="delete">HOULD</span><span class="insert">T</span> use two-factor or Multi-Factor Authentication to allow access to <span class="delete">P</span><span class="insert">p</span>rivileged <span class="delete">A</span><span class="insert">a</span>ccounts.</td>
+                </tr>
+                
+                <tr>
+                    <td>2001</td>
+                    <td>16.6.7.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>A system management log SHOULD record the following minimum information:allsystem start-up andshutdown;<span class="insert">all systemchanges;userchanges;</span>service, application,<span class="delete"> component or system failures;maintenance </span><span class="insert">componentor systemfailures;maintenance</span>activities;backup and archivalactivities;system recovery activities; andspecial or out of hours activities.</td>
+                </tr>
+                
+                <tr>
+                    <td>2009</td>
+                    <td>16.6.9.C.01.</td>
+                    <td>Top Secret, Secret, Confidential</td>
+                    <td>Must</td>
+                    <td>AgenciesMUSTlog, at minimum, the following events for all software components:<span class="delete">logons;failed logon attempts;logoffs;date and time;all privileged operations;failed attempts to elevate privileges;security related system alerts and failur</span><span class="insert">any login activity orattempts;date andtime;all privilegedoperations;failed attempts to elevateprivileges;security related system alerts andfailures;software upgrades and/or softwarepatching;system recoveryactiviti</span>es;system user and group additions,<span class="delete"> deletions </span><span class="insert">deletions</span>and modification to permissions; andunauthorised or failed access attempts to systems and files identified as critical to the<span class="delete"> agency</span><span class="insert">organisation</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>2013</td>
+                    <td>16.6.10.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>AgenciesSHOULDlog, at minimum, the following events for all software components:<span class="delete">user login;all pr</span><span class="insert">Any login act</span>ivi<span class="delete">leged operations;failed attempts to ele</span><span class="insert">ty orattempts;all pri</span>v<span class="delete">ate pri</span><span class="insert">ilegedoperations;failed attempts to ele</span>v<span class="delete">ileges;security related system alerts and failures</span><span class="insert">ateprivileges;security related system alerts andfailures;all softwareupdates and/or patching</span>;system user and group additions,<span class="delete"> deletions </span><span class="insert">deletions</span>and modification to permissions; andunauthorised<span class="delete"> or failed </span><span class="insert">or failed</span>access attempts to systems and files identified as critical to the<span class="delete"> agency</span><span class="insert">organisation</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>2022</td>
+                    <td>16.6.12.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>Event logsMUSTbe protected from:modification<span class="delete"> and </span><span class="insert">;</span>unauthorised access;andwhole or partial loss within the defined retention period.</td>
+                </tr>
+                
+                <tr>
+                    <td>2031</td>
+                    <td>16.6.13.C.04.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>AgenciesSHOULDretainDNS,proxyand event logs for a<span class="delete">t</span><span class="insert">minimum</span> <span class="delete">least </span><span class="insert">of</span>1<span class="delete">8 </span><span class="insert">2</span>months.</td>
+                </tr>
+                
+                <tr>
+                    <td>6953</td>
+                    <td>16.7.42.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>Where an agency has implemented MFA they <span class="insert">MU</span>S<span class="delete">HOULD</span><span class="insert">T</span>:<span class="delete">R</span><span class="insert">r</span>equire MFA for administrative or other high privileged users; and<span class="delete">I</span><span class="insert">i</span>mplement a secure, multi-factor process to allow <span class="delete">users to reset their normal usage</span><span class="insert">entities to reset their standard</span> user credentials.</td>
+                </tr>
+                
+                <tr>
+                    <td>6952</td>
+                    <td>16.7.42.C.07.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>The design of an agency<span class="delete">’s</span> MFA SHOULD include consideration of:Risk <span class="delete">I</span><span class="insert">i</span>dentification;Level of security and access control appropriate for each aspect of an <span class="delete">agency</span><span class="insert">organisation</span>’s information systems (data, devices, equipment, storage, cloud, etc.)A formal authorisation process for user system access and entitlements;Logging,<span class="delete"> </span><span class="insert"> </span>monitoring and reporting of activity;Review of logs for orphaned accounts and inappropriate user access<span class="insert"> including unsuccessful authentication</span>;Identification of error and anomalies which may indicate inappropriate or malicious activity;Incident response;Remediation of errors;Suspension and/or revocation of access rights where policy violations occur;Capacity planning.</td>
+                </tr>
+                
+                <tr>
+                    <td>6956</td>
+                    <td>16.7.43.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Should</td>
+                    <td>The design of an <span class="delete">agency’</span><span class="insert">organisation</span>s MFA system SHOULD be integrated with the agency’s Information Security Policy<span class="delete"> and</span><span class="insert">,</span> the agency’s Privileged Access Management (PAM) Policy<span class="insert">, and any additional agency password policies</span>.</td>
+                </tr>
+                
+                <tr>
+                    <td>6960</td>
+                    <td>16.7.44.C.01.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td>When agencies<span class="insert">’</span> implement MFA they MUST ensure users have an understanding of the risks, and include appropriate usage and safeguards for MFA in the <span class="delete">agency</span><span class="insert">organisation</span>’s user training and awareness programmes.</td>
+                </tr>
+                
+                <tr>
+                    <td>3319</td>
+                    <td>18.2.9.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Must</td>
+                    <td><span class="delete">WPA2-Enterprise with </span>EAP-TLS,<span class="delete"> WPA2-Enterprise with</span> PEAP-EAP-TLS, <span class="delete">WPA2-Enterprise with </span>EAP-TTLS or<span class="delete"> WPA2-Enterprise with</span> PEAP MUST be used on wireless networks to perform mutual authentication.</td>
+                </tr>
+                
+                <tr>
+                    <td>3386</td>
+                    <td>18.2.19.C.02.</td>
+                    <td>All Classifications</td>
+                    <td>Should Not</td>
+                    <td>Agencies SHOULD NOT use Wi-Fi Protected Access <span class="insert">2 </span>(WPA<span class="insert">2</span>) for wireless deployments.</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+<body>
+</html>

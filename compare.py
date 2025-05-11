@@ -136,7 +136,7 @@ def compare_files(old, old_fileversion, new, new_fileversion, output_file):
             "sortkey": sortkey(el.attrib['title']),
             "title": el.attrib['title'],
             "classifications": el.attrib[attributes[old_fileversion]['classifications']],
-            "compliances": el.attrib[attributes[new_fileversion]['compliances']],
+            "compliances": el.attrib[attributes[old_fileversion]['compliances']],
             "text": el.text,
         }
         controls_removed.append(control)
