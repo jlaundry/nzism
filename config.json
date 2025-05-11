@@ -34,5 +34,11 @@
         "date": "2024-09-01",
         "filename": "nzism-data/NZISM-ISM Document-V.-3.8-September-2024.xml",
         "fileversion": 2
+    },
+    {
+        "version": "3.9",
+        "date": "2025-05-01",
+        "filename": "nzism-data/NZISM-ISM Document-V.-3.9-April-2025.xml",
+        "fileversion": 2
     }
 ]
